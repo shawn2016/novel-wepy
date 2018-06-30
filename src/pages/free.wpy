@@ -125,7 +125,11 @@
 <script>
 import wepy from 'wepy'
 
-export default class Free extends wepy.page {}
+export default class Free extends wepy.page {
+  config = {
+    navigationBarTitleText: '限免-书仙阁'
+  }
+}
 </script>
 
 <style>

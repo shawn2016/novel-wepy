@@ -129,6 +129,7 @@ input {
 
 .search-wrap .search {
     float: left;
+    position: relative;
     width: 100%;
     background: #f3f3f3;
     height: 1.5*40rpx;
@@ -154,20 +155,22 @@ input {
     color: #b2b2b2;
     height: 1.5*40rpx;
     line-height: 1.5*40rpx;
-    width: 60%;
+    padding-right: 180rpx;
+    padding-left: 20rpx;
 }
 
 .search-wrap .search .search-btn {
-    font-size: 0.8*40rpx;
-    /*0.4*/
+    font-size: 32rpx;
     float: right;
     margin-right: 26px;
-    /*10*/
-    line-height: 1.575*40rpx;
+    line-height: 63rpx;
     border-left: 1px solid #fff;
-    padding-left: 1*40rpx;
-    /*0.375*/
+    padding-left: 40rpx;
     color: #77a9fd;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    right: 0;
 }
 
 .search-wrap .classify-ico {
@@ -593,7 +596,7 @@ input {
 .main .section-bd .flag-wrap span {
     display: block;
     color: #77a9fd;
-    font-size: 0.3*40rpx;
+    font-size: 20rpx;
 }
 
 .main .section-bd .weui-media-box__desc {
@@ -608,7 +611,7 @@ input {
 .main .section-bd .ps-info span {
     float: right;
     margin-top: 0.625*40rpx;
-    font-size: 0.5*40rpx;
+    font-size: 25rpx;
     color: #b2b2b2;
     transform: scale(0.9);
 }
@@ -1373,7 +1376,7 @@ input {
 
 .Recharge .money .ps-info {
     /*font-size: 0.7*40rpx;*/
-    font-size: 0.35*40rpx;
+    font-size: 16rpx;
     color: #f96ea7;
     border-top: 0.025*40rpx solid #e5e5e5;
     margin-top: 0.25*40rpx;
@@ -2063,6 +2066,10 @@ input {
 
 .My .weui-cells:after {
     border-bottom: none;
+}
+
+.swiper-top {
+    height: 260rpx
 }
 
 .time-wrap {

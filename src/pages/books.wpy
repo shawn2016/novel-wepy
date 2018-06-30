@@ -28,7 +28,7 @@
                                 <view class="scroller">
                                     <ul class="clearfix">
                                         <li class="cur">
-                                            <a  href="javascript:void(0)">全部</a>
+                                            <a href="javascript:void(0)">全部</a>
                                         </li>
                                         <li>
                                             <a href="javascript:void(0)">都市</a>
@@ -57,9 +57,9 @@
                                         <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
                                             <view class="weui-media-box__hd">
                                                 <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
-                                                <span class="tag">
-                                                    <i>限免</i>
-                                                </span>
+                                                    <span class="tag">
+                                                        <i>限免</i>
+                                                    </span>
                                             </view>
                                             <view class="weui-media-box__bd">
                                                 <view class="weui-media-box__title weui-flex">
@@ -75,9 +75,9 @@
                                         <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
                                             <view class="weui-media-box__hd">
                                                 <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
-                                                <span class="tag">
-                                                    <i>限免</i>
-                                                </span>
+                                                    <span class="tag">
+                                                        <i>限免</i>
+                                                    </span>
                                             </view>
                                             <view class="weui-media-box__bd">
                                                 <view class="weui-media-box__title weui-flex">
@@ -93,9 +93,9 @@
                                         <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
                                             <view class="weui-media-box__hd">
                                                 <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
-                                                <span class="tag">
-                                                    <i>限免</i>
-                                                </span>
+                                                    <span class="tag">
+                                                        <i>限免</i>
+                                                    </span>
                                             </view>
                                             <view class="weui-media-box__bd">
                                                 <view class="weui-media-box__title weui-flex">
@@ -111,9 +111,9 @@
                                         <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
                                             <view class="weui-media-box__hd">
                                                 <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
-                                                <span class="tag">
-                                                    <i>限免</i>
-                                                </span>
+                                                    <span class="tag">
+                                                        <i>限免</i>
+                                                    </span>
                                             </view>
                                             <view class="weui-media-box__bd">
                                                 <view class="weui-media-box__title weui-flex">
@@ -129,9 +129,9 @@
                                         <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
                                             <view class="weui-media-box__hd">
                                                 <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
-                                                <span class="tag">
-                                                    <i>限免</i>
-                                                </span>
+                                                    <span class="tag">
+                                                        <i>限免</i>
+                                                    </span>
                                             </view>
                                             <view class="weui-media-box__bd">
                                                 <view class="weui-media-box__title weui-flex">
@@ -147,9 +147,9 @@
                                         <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
                                             <view class="weui-media-box__hd">
                                                 <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
-                                                <span class="tag">
-                                                    <i>限免</i>
-                                                </span>
+                                                    <span class="tag">
+                                                        <i>限免</i>
+                                                    </span>
                                             </view>
                                             <view class="weui-media-box__bd">
                                                 <view class="weui-media-box__title weui-flex">
@@ -165,9 +165,9 @@
                                         <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
                                             <view class="weui-media-box__hd">
                                                 <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
-                                                <span class="tag">
-                                                    <i>限免</i>
-                                                </span>
+                                                    <span class="tag">
+                                                        <i>限免</i>
+                                                    </span>
                                             </view>
                                             <view class="weui-media-box__bd">
                                                 <view class="weui-media-box__title weui-flex">
@@ -183,9 +183,9 @@
                                         <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
                                             <view class="weui-media-box__hd">
                                                 <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
-                                                <span class="tag">
-                                                    <i>限免</i>
-                                                </span>
+                                                    <span class="tag">
+                                                        <i>限免</i>
+                                                    </span>
                                             </view>
                                             <view class="weui-media-box__bd">
                                                 <view class="weui-media-box__title weui-flex">
@@ -201,9 +201,9 @@
                                         <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
                                             <view class="weui-media-box__hd">
                                                 <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
-                                                <span class="tag">
-                                                    <i>限免</i>
-                                                </span>
+                                                    <span class="tag">
+                                                        <i>限免</i>
+                                                    </span>
                                             </view>
                                             <view class="weui-media-box__bd">
                                                 <view class="weui-media-box__title weui-flex">
@@ -219,9 +219,9 @@
                                         <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
                                             <view class="weui-media-box__hd">
                                                 <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
-                                                <span class="tag">
-                                                    <i>限免</i>
-                                                </span>
+                                                    <span class="tag">
+                                                        <i>限免</i>
+                                                    </span>
                                             </view>
                                             <view class="weui-media-box__bd">
                                                 <view class="weui-media-box__title weui-flex">
@@ -279,7 +279,11 @@
 <script>
 import wepy from 'wepy'
 
-export default class Books extends wepy.page {}
+export default class Books extends wepy.page {
+  config = {
+    navigationBarTitleText: '书库-书仙阁'
+  }
+}
 </script>
 
 <style>

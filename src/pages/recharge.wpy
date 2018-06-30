@@ -142,7 +142,11 @@
 <script>
 import wepy from 'wepy'
 
-export default class Recharge extends wepy.page {}
+export default class Recharge extends wepy.page {
+  config = {
+    navigationBarTitleText: '充值-书仙阁'
+  }
+}
 </script>
 
 <style>

@@ -1,8 +1,6 @@
 <style lang="less">
-// @import './zanui/index.wxss';
-@import 'assets/styles/jquery-weui.wxss';
+@import './zanui/index.wxss';
 @import 'assets/styles/weui.wxss';
-
 @import 'assets/styles/app.less';
 page {
   height: 100%;
@@ -30,7 +28,8 @@ export default class extends wepy.app {
       'pages/free',
       'pages/recharge',
       'pages/books',
-      'pages/mine'
+      'pages/mine',
+      'pages/xiaoshuo-cover'
     ],
     window: {
       backgroundColor: '#fff',

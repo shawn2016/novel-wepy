@@ -1,0 +1,157 @@
+<template>
+    <view class="container">
+        <view class="weui-tab Listen">
+            <view class="weui-tab__bd">
+                <view class="weui-tab__bd-item weui-tab__bd-item--active">
+                    <view class="main">
+                        <view class="section-bd image-text section-bd">
+                            <view class="weui-panel__bd">
+                                <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                                    <view class="weui-media-box__hd">
+                                        <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                    </view>
+                                    <view class="weui-media-box__bd">
+                                        <view class="weui-media-box__title weui-flex">
+                                            <span class="textoverflow">标题一</span>
+                                            <view class="flag-wrap inline">
+                                                <span>火爆精品 主编力推
+                                                    <span></span>
+                                                </span>
+                                            </view>
+                                        </view>
+                                        <view class="free-time">
+                                            <span>限免时间：3月18日～3月28日</span>
+                                        </view>
+                                        <view class="read-sum">
+                                            <i>1022</i>人阅读</view>
+                                        <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                                    </view>
+                                </a>
+                                <view class="weui-flex button">
+                                    <view class="weui-flex__item">
+                                        <a href="javascript:;" class="weui-btn yellow-btn">开始阅读</a>
+                                    </view>
+                                    <view class="weui-flex__item">
+                                        <a href="javascript:;" class="weui-btn red-btn">打赏（送书币）</a>
+                                    </view>
+                                    <view class="weui-flex__item">
+                                        <a href="javascript:;" class="weui-btn blue-btn">
+                                            <i class="comment-ico"></i>评论</a>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="ad-wrap">
+                            <image src="https://wxstatic.778mk.com/wxstatic/template/images/temp/ad/ad_04.jpg" alt="">
+                        </view>
+                        <view class="section-bd image-text section-bd">
+                            <view class="bd-title">目录
+                                <em>第一章 卸甲归田</em>
+                                <a href="#" class="more">
+                                    <i class="sum">共1000节</i>
+                                    <i class="gt-ico"></i>
+                                </a>
+                            </view>
+                        </view>
+                        <view class="section-bd image-text section-bd avatar">
+                            <view class="give-reward">
+                                本书已收到
+                                <em>4111</em> 元打赏 共
+                                <strong>151</strong>人打赏
+                            </view>
+                            <view class="weui-panel__bd weui-flex">
+                                <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg weui-flex__item">
+                                    <view class="weui-media-box__hd">
+                                        <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/atatar/avatar-samll.jpg" alt="">
+                                    </view>
+                                    <view class="weui-media-box__bd">
+                                        <view class="weui-media-box__title">标题一</view>
+                                        <p class="money">88元</p>
+                                    </view>
+                                    <span class="king-rank one">
+                                        <i>1</i>
+                                    </span>
+                                </a>
+                                <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg weui-flex__item">
+                                    <view class="weui-media-box__hd">
+                                        <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/atatar/avatar-samll.jpg" alt="">
+                                    </view>
+                                    <view class="weui-media-box__bd">
+                                        <view class="weui-media-box__title">标题二</view>
+                                        <p class="money">78元</p>
+                                    </view>
+                                    <span class="king-rank two">
+                                        <i>2</i>
+                                    </span>
+                                </a>
+                                <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg weui-flex__item">
+                                    <view class="weui-media-box__hd">
+                                        <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/atatar/avatar-samll.jpg" alt="">
+                                    </view>
+                                    <view class="weui-media-box__bd">
+                                        <view class="weui-media-box__title">标题二</view>
+                                        <p class="money">68元</p>
+                                    </view>
+                                    <span class="king-rank three">
+                                        <i>3</i>
+                                    </span>
+                                </a>
+                            </view>
+                            <view class="weui-flex button">
+                                <a href="javascript:;" class="weui-btn red-btn weui-btn_mini">打赏（送金币）</a>
+                            </view>
+                        </view>
+                        <view class="section-bd image-text section-bd comment">
+                            <view class="bd-title">评论
+                                <i class="sum">1000条</i>
+                            </view>
+                            <view class="weui-flex button">
+                                <input type="text" class="weui-flex__item comment-inp" value="" placeholder="评论可得10书币">
+                                <a href="javascript:;" class="weui-btn yellow-btn">发表</a>
+                            </view>
+                            <view class="weui-panel__bd">
+                                <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+                                    <view class="weui-media-box__hd">
+                                        <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/avatar.jpg" alt="">
+                                    </view>
+                                    <view class="weui-media-box__bd">
+                                        <view class="weui-media-box__title">
+                                            刘亦菲
+                                            <span class="weui-media-box__title-after">下午8:12</span>
+                                        </view>
+                                        <p class="weui-media-box__desc">小李明天早上帮我带两个包子，一个猪肉粉丝和一个奶黄包</p>
+                                    </view>
+                                </a>
+                                <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+                                    <view class="weui-media-box__hd">
+                                        <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/avatar2.jpg" alt="">
+                                    </view>
+                                    <view class="weui-media-box__bd">
+                                        <view class="weui-media-box__title">
+                                            Baby
+                                            <span class="weui-media-box__title-after">下午7:23</span>
+                                        </view>
+                                        <p class="weui-media-box__desc">晚上约吗？</p>
+                                    </view>
+                                </a>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </View>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class XiaoshuoCover extends wepy.page {
+  config = {
+    navigationBarTitleText: '限免-书仙阁'
+  }
+}
+</script>
+
+<style>
+</style>

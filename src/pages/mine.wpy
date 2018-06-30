@@ -42,7 +42,7 @@
                         <view class="weui-panel__bd my-list">
                             <view class="weui-media-box weui-media-box_small-appmsg">
                                 <view class="weui-cells">
-                                    <a class="weui-cell weui-cell_access" href="javascript:;">
+                                    <navigator url="/pages/xiaoshuo-cover" open-type="navigate" class="weui-cell weui-cell_access">
                                         <view class="weui-cell__hd list recharge-ico"></view>
                                         <view class="weui-cell__bd weui-cell_primary">
                                             <p>充值</p>
@@ -50,7 +50,7 @@
                                         <span class="weui-cell__ft">
                                             充值送大礼
                                         </span>
-                                    </a>
+                                    </navigator>
                                     <a class="weui-cell weui-cell_access" href="javascript:;">
                                         <view class="weui-cell__hd list history-ico"></view>
                                         <view class="weui-cell__bd weui-cell_primary">
@@ -196,7 +196,11 @@
 <script>
 import wepy from 'wepy'
 
-export default class Mine extends wepy.page {}
+export default class Mine extends wepy.page {
+  config = {
+    navigationBarTitleText: '个人中心-书仙阁'
+  }
+}
 </script>
 
 <style>

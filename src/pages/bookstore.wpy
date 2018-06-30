@@ -38,7 +38,7 @@
         </view>
         <view class="main">
             <view class="swiper-container swiper-container-horizontal">
-                <swiper class="swiper-top" indicator-dots="{{indicatorDots}}" circular autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+                <swiper class="swiper-top" indicator-active-color="#77a9fd" indicator-color="#fff" indicator-dots circular autoplay interval="3000" duration="500">
                     <repeat item="item" key="index" index="index" for="{{imgUrls}}">
                         <swiper-item>
                             <image src="{{item}}" class="slide-image" width="100%" height="150">
@@ -469,6 +469,9 @@
 import wepy from 'wepy'
 
 export default class Bookstore extends wepy.page {
+  config = {
+    navigationBarTitleText: '首页-书仙阁'
+  }
   data = {
     imgUrls: [
       'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
@@ -522,5 +525,4 @@ export default class Bookstore extends wepy.page {
 </script>
 
 <style lang="less" >
-@import '../assets/styles/bookstore.less';
 </style>
