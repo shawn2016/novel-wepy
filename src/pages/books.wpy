@@ -1,6 +1,278 @@
 <template>
     <view class="container">
-        Books
+        <view class="weui-tab Library">
+            <view class="weui-tab__bd">
+                <view id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+                    <view class="container">
+                        <view class="nav-sidebar">
+                            <ul class="nav-sidebar-list">
+                                <li>
+                                    <a class="cur" href="javascript:;">男生</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">女生</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">听书</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">漫画</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">小视频</a>
+                                </li>
+                            </ul>
+                        </view>
+                        <view class="main-bd">
+                            <view class="nav-wrap small" id="retr">
+                                <view class="scroller">
+                                    <ul class="clearfix">
+                                        <li class="cur">
+                                            <a  href="javascript:void(0)">全部</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">都市</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">玄幻</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">历史</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">军旅</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">官场</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">恐怖</a>
+                                        </li>
+                                    </ul>
+                                </view>
+                            </view>
+                            <view class="main">
+                                <view class="section-bd image-text smaller section-bd">
+                                    <view class="weui-panel__bd">
+                                        <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                                            <view class="weui-media-box__hd">
+                                                <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                                <span class="tag">
+                                                    <i>限免</i>
+                                                </span>
+                                            </view>
+                                            <view class="weui-media-box__bd">
+                                                <view class="weui-media-box__title weui-flex">
+                                                    <span class="textoverflow ">标题一标题一标题一标题一</span>
+                                                    <span class="read-sum weui-flex__item">
+                                                        <i>1022</i>人在读</span>
+                                                </view>
+                                                <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                                            </view>
+                                        </a>
+                                    </view>
+                                    <view class="weui-panel__bd">
+                                        <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                                            <view class="weui-media-box__hd">
+                                                <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                                <span class="tag">
+                                                    <i>限免</i>
+                                                </span>
+                                            </view>
+                                            <view class="weui-media-box__bd">
+                                                <view class="weui-media-box__title weui-flex">
+                                                    <span class="textoverflow ">标题一标题一标题一标题一</span>
+                                                    <span class="read-sum weui-flex__item">
+                                                        <i>1022</i>人在读</span>
+                                                </view>
+                                                <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                                            </view>
+                                        </a>
+                                    </view>
+                                    <view class="weui-panel__bd">
+                                        <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                                            <view class="weui-media-box__hd">
+                                                <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                                <span class="tag">
+                                                    <i>限免</i>
+                                                </span>
+                                            </view>
+                                            <view class="weui-media-box__bd">
+                                                <view class="weui-media-box__title weui-flex">
+                                                    <span class="textoverflow ">标题一标题一标题一标题一</span>
+                                                    <span class="read-sum weui-flex__item">
+                                                        <i>1022</i>人在读</span>
+                                                </view>
+                                                <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                                            </view>
+                                        </a>
+                                    </view>
+                                    <view class="weui-panel__bd">
+                                        <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                                            <view class="weui-media-box__hd">
+                                                <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                                <span class="tag">
+                                                    <i>限免</i>
+                                                </span>
+                                            </view>
+                                            <view class="weui-media-box__bd">
+                                                <view class="weui-media-box__title weui-flex">
+                                                    <span class="textoverflow ">标题一标题一标题一标题一</span>
+                                                    <span class="read-sum weui-flex__item">
+                                                        <i>1022</i>人在读</span>
+                                                </view>
+                                                <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                                            </view>
+                                        </a>
+                                    </view>
+                                    <view class="weui-panel__bd">
+                                        <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                                            <view class="weui-media-box__hd">
+                                                <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                                <span class="tag">
+                                                    <i>限免</i>
+                                                </span>
+                                            </view>
+                                            <view class="weui-media-box__bd">
+                                                <view class="weui-media-box__title weui-flex">
+                                                    <span class="textoverflow ">标题一标题一标题一标题一</span>
+                                                    <span class="read-sum weui-flex__item">
+                                                        <i>1022</i>人在读</span>
+                                                </view>
+                                                <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                                            </view>
+                                        </a>
+                                    </view>
+                                    <view class="weui-panel__bd">
+                                        <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                                            <view class="weui-media-box__hd">
+                                                <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                                <span class="tag">
+                                                    <i>限免</i>
+                                                </span>
+                                            </view>
+                                            <view class="weui-media-box__bd">
+                                                <view class="weui-media-box__title weui-flex">
+                                                    <span class="textoverflow ">标题一标题一标题一标题一</span>
+                                                    <span class="read-sum weui-flex__item">
+                                                        <i>1022</i>人在读</span>
+                                                </view>
+                                                <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                                            </view>
+                                        </a>
+                                    </view>
+                                    <view class="weui-panel__bd">
+                                        <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                                            <view class="weui-media-box__hd">
+                                                <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                                <span class="tag">
+                                                    <i>限免</i>
+                                                </span>
+                                            </view>
+                                            <view class="weui-media-box__bd">
+                                                <view class="weui-media-box__title weui-flex">
+                                                    <span class="textoverflow ">标题一标题一标题一标题一</span>
+                                                    <span class="read-sum weui-flex__item">
+                                                        <i>1022</i>人在读</span>
+                                                </view>
+                                                <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                                            </view>
+                                        </a>
+                                    </view>
+                                    <view class="weui-panel__bd">
+                                        <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                                            <view class="weui-media-box__hd">
+                                                <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                                <span class="tag">
+                                                    <i>限免</i>
+                                                </span>
+                                            </view>
+                                            <view class="weui-media-box__bd">
+                                                <view class="weui-media-box__title weui-flex">
+                                                    <span class="textoverflow ">标题一标题一标题一标题一</span>
+                                                    <span class="read-sum weui-flex__item">
+                                                        <i>1022</i>人在读</span>
+                                                </view>
+                                                <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                                            </view>
+                                        </a>
+                                    </view>
+                                    <view class="weui-panel__bd">
+                                        <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                                            <view class="weui-media-box__hd">
+                                                <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                                <span class="tag">
+                                                    <i>限免</i>
+                                                </span>
+                                            </view>
+                                            <view class="weui-media-box__bd">
+                                                <view class="weui-media-box__title weui-flex">
+                                                    <span class="textoverflow ">标题一标题一标题一标题一</span>
+                                                    <span class="read-sum weui-flex__item">
+                                                        <i>1022</i>人在读</span>
+                                                </view>
+                                                <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                                            </view>
+                                        </a>
+                                    </view>
+                                    <view class="weui-panel__bd">
+                                        <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                                            <view class="weui-media-box__hd">
+                                                <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                                <span class="tag">
+                                                    <i>限免</i>
+                                                </span>
+                                            </view>
+                                            <view class="weui-media-box__bd">
+                                                <view class="weui-media-box__title weui-flex">
+                                                    <span class="textoverflow ">标题一标题一标题一标题一</span>
+                                                    <span class="read-sum weui-flex__item">
+                                                        <i>1022</i>人在读</span>
+                                                </view>
+                                                <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                                            </view>
+                                        </a>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-tabbar nav-tabbar">
+                <a href="javascript:;" class="weui-tabbar__item weui-bar__item--on">
+                    <view class="weui-tabbar__icon">
+                        <span class="nav-library-ico"></span>
+                    </view>
+                    <p class="weui-tabbar__label">书城</p>
+                </a>
+                <a href="javascript:;" class="weui-tabbar__item">
+                    <view class="weui-tabbar__icon">
+                        <span class="nav-free-ico"></span>
+                    </view>
+                    <p class="weui-tabbar__label">限免</p>
+                </a>
+                <a href="javascript:;" class="weui-tabbar__item">
+                    <span class="weui-badge weui-badge_dot small-dot"></span>
+                    <view class="weui-tabbar__icon">
+                        <span class="nav-found_ico"></span>
+                    </view>
+                    <p class="weui-tabbar__label">发现</p>
+                </a>
+                <a href="javascript:;" class="weui-tabbar__item">
+                    <view class="weui-tabbar__icon">
+                        <span class="nav-small-library-ico"></span>
+                    </view>
+                    <p class="weui-tabbar__label">书库</p>
+                </a>
+                <a href="javascript:;" class="weui-tabbar__item">
+                    <view class="weui-tabbar__icon">
+                        <span class="nav-my_ico"></span>
+                    </view>
+                    <p class="weui-tabbar__label">我的</p>
+                </a>
+            </view>
+        </view>
     </View>
 </template>
 

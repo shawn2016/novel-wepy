@@ -1,196 +1,468 @@
 <template>
-    <view class="container">
-        <view class="container-top">
-            <!-- 搜索框 -->
-            <view class="search-bar">
-                <image src="../assets/images/home/search.png" class="search-icon">
-                    <input type='text' placeholder='搜索书名...' />
-                    <view class="search-text">
-                        搜索
-                    </view>
+    <view>
+        <view class="head-wrap">
+            <view class="search-wrap">
+                <view class="search">
+                    <i class="search-ico"></i>
+                    <input type="text" placeholder="搜索书名/作者/主角名">
+                    <view class="search-btn">搜索</view>
+                </view>
+
+            </view>
+            <view class="nav-wrap" id="retr">
+                <view class="scroller" style="width: 354px; transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+                    <ul class="clearfix">
+                        <li class="cur" style="margin-left: 0px; margin-right: 0px;">
+                            <a href="javascript:void(0)">精选</a>
+                        </li>
+                        <li class="" style="margin-left: 0px; margin-right: 0px;">
+                            <a href="javascript:void(0)">男生</a>
+                        </li>
+                        <li class="" style="margin-left: 0px; margin-right: 0px;">
+                            <a href="javascript:void(0)">女生</a>
+                        </li>
+                        <li style="margin-left: 0px; margin-right: 0px;">
+                            <a href="javascript:void(0)">听书</a>
+                        </li>
+                        <li style="margin-left: 0px; margin-right: 0px;">
+                            <a href="javascript:void(0)">漫画
+                                <i class="hot-ico"></i>
+                            </a>
+                        </li>
+                        <li style="margin-left: 0px; margin-right: 0px;">
+                            <a href="javascript:void(0)">小视频</a>
+                        </li>
+                    </ul>
+                </view>
             </view>
         </view>
-        <!-- 顶部菜单 -->
-        <view class="container-menu">
-            <view class="menu-item active">
-                <a href="">精选</a>
-            </view>
-            <view class="menu-item">
-                <a href="">男生</a>
-            </view>
-            <view class="menu-item">
-                <a href="">女生</a>
-            </view>
-            <view class="menu-item">
-                <a href="">书库</a>
-            </view>
-            <view class="menu-item">
-                <a href="">听书</a>
-            </view>
-
-        </view>
-        <view class="container-layout">
-
-            <!-- 轮播 -->
-            <swiper class="swiper-top" indicator-dots="{{indicatorDots}}" circular autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-                <repeat item="item" key="index" index="index" for="{{imgUrls}}">
-                    <swiper-item>
-                        <image src="{{item}}" class="slide-image" width="100%" height="150">
-                    </swiper-item>
-                </repeat>
-            </swiper>
-            <!-- 项目类别 -->
-            <view class="pro-kind">
-                <view class="item">
-                    <image src="../assets/images/home/home.png" class="slide-image">
-                        排行榜
-                </view>
-                <view class="item">
-                    <image src="../assets/images/home/home.png" class="slide-image">
-                        排行榜
-                </view>
-                <view class="item">
-                    <image src="../assets/images/home/home.png" class="slide-image">
-                        排行榜
-                </view>
-                <view class="item">
-                    <image src="../assets/images/home/home.png" class="slide-image">
-                        排行榜
-                </view>
-                <view class="item">
-                    <image src="../assets/images/home/home.png" class="slide-image">
-                        排行榜
-                </view>
-            </view>
-
-            <!-- 阅读记录 -->
-            <view class="container-panel">
-                <view class="clearfix">
-                    <view class="title">
-                        阅读记录
-                    </view>
-                    <!-- <view class="more">
-            更多 >
-          </view> -->
-                </view>
-                <swiper class="swiper-reader" circular indicator-dots="{{indicatorDots}}" interval="{{interval}}" duration="{{duration}}">
-                    <repeat item="item" key="index" index="index" for="{{readerData}}">
+        <view class="main">
+            <view class="swiper-container swiper-container-horizontal">
+                <swiper class="swiper-top" indicator-dots="{{indicatorDots}}" circular autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+                    <repeat item="item" key="index" index="index" for="{{imgUrls}}">
                         <swiper-item>
-                            <image src="{{item.imgUrl}}" class="slide-image">
-                                <view class="right">
-                                    <view class="title">
-                                        {{item.title}}
-                                    </view>
-                                    <view class="subtitle">
-
-                                        阅读到
-                                        <text>{{item.num}}</text>
-                                        章
-                                    </view>
-                                    <view class="content">
-                                        {{item.content}}
-                                    </view>
-                                </view>
+                            <image src="{{item}}" class="slide-image" width="100%" height="150">
                         </swiper-item>
                     </repeat>
                 </swiper>
             </view>
 
-            <!-- 听书频道 -->
-            <view class="container-panel">
-                <view class="clearfix">
-                    <view class="title">
-                        听书频道
+            <view class="select-menu-wrap">
+                <view class="weui-flex">
+                    <view class="weui-flex__item">
+                        <a href="#" class="select-menu">
+                            <i class="rank-ico"></i>
+                            <span>排行榜</span>
+                        </a>
                     </view>
-                    <view class="more">
-                        更多 >
+                    <view class="weui-flex__item">
+                        <a href="#" class="select-menu">
+                            <i class="welfare-ico"></i>
+                            <span>福利</span>
+                        </a>
                     </view>
-                </view>
-                <view class="book-list clearfix">
-                    <view class="item">
-                        <image src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=86172d1da744ad343ab28fd5b1cb6791/0ff41bd5ad6eddc446ee3b0b3fdbb6fd52663330.jpg" class="book-image">
-                            哈哈好
+                    <view class="weui-flex__item">
+                        <a href="#" class="select-menu">
+                            <i class="free-ico"></i>
+                            <span>限免</span>
+                        </a>
                     </view>
-                    <view class="item">
-                        <image src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=86172d1da744ad343ab28fd5b1cb6791/0ff41bd5ad6eddc446ee3b0b3fdbb6fd52663330.jpg" class="book-image">
-                            哈哈好
+                    <view class="weui-flex__item">
+                        <a href="#" class="select-menu">
+                            <i class="pay-ico"></i>
+                            <span>充值</span>
+                        </a>
                     </view>
-                    <view class="item">
-                        <image src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=86172d1da744ad343ab28fd5b1cb6791/0ff41bd5ad6eddc446ee3b0b3fdbb6fd52663330.jpg" class="book-image">
-                            哈哈好
-                    </view>
-                    <view class="item">
-                        <image src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=86172d1da744ad343ab28fd5b1cb6791/0ff41bd5ad6eddc446ee3b0b3fdbb6fd52663330.jpg" class="book-image">
-                            哈哈好
-                    </view>
-                    <view class="item">
-                        <image src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=86172d1da744ad343ab28fd5b1cb6791/0ff41bd5ad6eddc446ee3b0b3fdbb6fd52663330.jpg" class="book-image">
-                            哈哈好
-                    </view>
-                    <view class="item">
-                        <image src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=86172d1da744ad343ab28fd5b1cb6791/0ff41bd5ad6eddc446ee3b0b3fdbb6fd52663330.jpg" class="book-image">
-                            哈哈好
-                    </view>
-                    <view class="item">
-                        <image src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=86172d1da744ad343ab28fd5b1cb6791/0ff41bd5ad6eddc446ee3b0b3fdbb6fd52663330.jpg" class="book-image">
-                            哈哈好
-                    </view>
-                    <view class="item">
-                        <image src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=86172d1da744ad343ab28fd5b1cb6791/0ff41bd5ad6eddc446ee3b0b3fdbb6fd52663330.jpg" class="book-image">
-                            哈哈好
-                    </view>
-                    <view class="item">
-                        <image src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=86172d1da744ad343ab28fd5b1cb6791/0ff41bd5ad6eddc446ee3b0b3fdbb6fd52663330.jpg" class="book-image">
-                            哈哈好
+                    <view class="weui-flex__item">
+                        <a href="#" class="select-menu">
+                            <i class="library-ico"></i>
+                            <span>书库</span>
+                        </a>
                     </view>
                 </view>
             </view>
+            <!-- 阅读记录 -->
+            <view class="read-history-wrap image-text">
+                <view class="bd-title">阅读记录</view>
+                <view class="read-history-bd swiper-container-horizontal">
+                    <swiper class="swiper-reader" circular indicator-dots="{{indicatorDots}}" interval="{{interval}}" duration="{{duration}}">
+                        <repeat item="item" key="index" index="index" for="{{readerData}}">
+                            <swiper-item class="weui-media-box weui-media-box_appmsg">
+                                <view class="weui-media-box__hd">
+                                    <image src="{{item.imgUrl}}" class="slide-image">
+                                </view>
+                                <view class="weui-media-box__bd">
+                                    <view class="weui-media-box__title">
+                                        标题一
+                                        <span class="read-sum">阅读到
+                                            <i>1022</i>章</span>
+                                    </view>
+                                    <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                                    <view class="btn-wrap">
+                                        <a href="#" class="continue-btn">继续阅读</a>
+                                    </view>
+                                </view>
+                            </swiper-item>
+                        </repeat>
+                    </swiper>
 
-            <!-- 限时免费 -->
-            <view class="container-panel">
-                <view class="clearfix">
-                    <view class="title">
-                        限时免费
-                    </view>
-                    <view class="time-back">
-                        <view class="h">
-                            88
-                        </view>
-                        <view>
-                            :
-                        </view>
-                        <view class="h">
-                            88
-                        </view>
-                        <view>
-                            :
-                        </view>
-                        <view class="h">
-                            88
-                        </view>
-                    </view>
-                    <!-- <view class="more">
-            更多 >
-          </view> -->
                 </view>
-                <view class="book-list clearfix">
-                    <view class="item">
-                        <image src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=86172d1da744ad343ab28fd5b1cb6791/0ff41bd5ad6eddc446ee3b0b3fdbb6fd52663330.jpg" class="book-image">
-                            哈哈好
+            </view>
+            <!-- 活动 -->
+            <view class="ad-wrap">
+                <image src="https://wxstatic.778mk.com/wxstatic/template/images/temp/ad/ad_01.jpg" alt="">
+            </view>
+            <!-- 最新上架 -->
+            <view class="section-bd image-text section-bd">
+                <view class="bd-title">最新上架
+                    <a href="#" class="more">更多 &gt;</a>
+                </view>
+                <view class="weui-panel__bd">
+                    <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <view class="weui-media-box__title">标题一</view>
+                            <view class="flag-wrap">
+                                <span>火爆精品 主编力推
+                                    <span></span>
+                                </span>
+                            </view>
+                            <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                            <view class="ps-info">
+                                <span>
+                                    <i>1000</i>书友在追</span>
+                            </view>
+                        </view>
+                    </a>
+                </view>
+                <view class="weui-flex">
+                    <view class="weui-media-box weui-flex__item">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <span class="book-name">农门小娇妻</span>
+                        </view>
                     </view>
-                    <view class="item">
-                        <image src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=86172d1da744ad343ab28fd5b1cb6791/0ff41bd5ad6eddc446ee3b0b3fdbb6fd52663330.jpg" class="book-image">
-                            哈哈好
+                    <view class="weui-media-box weui-flex__item">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <span class="book-name">农门小娇妻</span>
+                        </view>
                     </view>
-                    <view class="item">
-                        <image src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=86172d1da744ad343ab28fd5b1cb6791/0ff41bd5ad6eddc446ee3b0b3fdbb6fd52663330.jpg" class="book-image">
-                            哈哈好
+                    <view class="weui-media-box weui-flex__item">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <span class="book-name">农门小娇妻</span>
+                        </view>
                     </view>
+                </view>
+            </view>
+            <!-- 活动 -->
+            <view class="ad-wrap">
+                <image src="https://wxstatic.778mk.com/wxstatic/template/images/temp/ad/ad_02.jpg" alt="">
+            </view>
+            <!-- 听书频道 -->
+            <view class="section-bd image-text section-bd">
+                <view class="bd-title">听书频道
+                    <!-- <view class="time-wrap">
+                        <span class="hour">01</span>
+                        <i>:</i>
+                        <span class="minute">28</span>
+                        <i>:</i>
+                        <span class="second">05</span>
+                    </view> -->
+                    <a href="#" class="more">更多 &gt;</a>
+                </view>
+                <view class="weui-grids list">
+                    <view class="weui-grid js_grid">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <span class="book-name">农门小娇妻</span>
+                        </view>
+                    </view>
+                    <view class="weui-grid js_grid">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <span class="book-name">农门小娇妻</span>
+                        </view>
+                    </view>
+                    <view class="weui-grid js_grid">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <span class="book-name">农门小娇妻</span>
+                        </view>
+                    </view>
+                    <view class="weui-grid js_grid">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <span class="book-name">农门小娇妻</span>
+                        </view>
+                    </view>
+                    <view class="weui-grid js_grid">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <span class="book-name">农门小娇妻</span>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <!-- 限时免费 -->
+            <view class="section-bd image-text section-bd">
+                <view class="bd-title">限时免费
+                    <view class="time-wrap">
+                        <span class="hour">01</span>
+                        <i>:</i>
+                        <span class="minute">28</span>
+                        <i>:</i>
+                        <span class="second">05</span>
+                    </view>
+                    <a href="#" class="more">更多 &gt;</a>
+                </view>
+                <view class="weui-grids list">
+                    <view class="weui-grid js_grid">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <span class="book-name">农门小娇妻</span>
+                        </view>
+                    </view>
+                    <view class="weui-grid js_grid">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <span class="book-name">农门小娇妻</span>
+                        </view>
+                    </view>
+                    <view class="weui-grid js_grid">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <span class="book-name">农门小娇妻</span>
+                        </view>
+                    </view>
+                    <view class="weui-grid js_grid">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <span class="book-name">农门小娇妻</span>
+                        </view>
+                    </view>
+                    <view class="weui-grid js_grid">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <span class="book-name">农门小娇妻</span>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <!-- 漫画推荐 -->
+            <view class="section-bd image-text small section-bd">
+                <view class="bd-title">漫画推荐
+                    <a href="#" class="more">更多 &gt;</a>
+                </view>
+                <view class="weui-flex">
+                    <view class="weui-media-box weui-flex__item">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <span class="book-name">农门小娇妻</span>
+                        </view>
+                    </view>
+                    <view class="weui-media-box weui-flex__item">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <span class="book-name">农门小娇妻</span>
+                        </view>
+                    </view>
+                    <view class="weui-media-box weui-flex__item">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <span class="book-name">农门小娇妻</span>
+                        </view>
+                    </view>
+                </view>
+                <view class="weui-panel__bd">
+                    <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <view class="weui-media-box__title">标题一
+                                <view class="star-wrap">
+                                    <span class="star-ico"></span>
+                                    <span class="star-ico"></span>
+                                    <span class="star-ico"></span>
+                                </view>
+                            </view>
+                            <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                        </view>
+                    </a>
+                </view>
+                <view class="weui-panel__bd">
+                    <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <view class="weui-media-box__title">标题一
+                                <view class="star-wrap">
+                                    <span class="star-ico"></span>
+                                </view>
+                            </view>
+                            <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                        </view>
+                    </a>
+                </view>
+                <view class="weui-panel__bd">
+                    <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <view class="weui-media-box__title">标题一
+                                <view class="star-wrap">
+                                    <span class="star-ico"></span>
+                                    <span class="star-ico"></span>
+                                </view>
+                            </view>
+                            <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                        </view>
+                    </a>
+                </view>
+            </view>
+            <!-- 活动 -->
+            <view class="signin-wrap">
+                <a href="#" class="signin">
+                    <image src="https://wxstatic.778mk.com/wxstatic/template/images/signin-ico.png" alt="">
+                </a>
+            </view>
+            <!-- 有声小说 -->
+            <view class="section-bd image-text section-bd">
+                <view class="bd-title">有声小说
+                    <a href="#" class="more">更多 &gt;</a>
+                </view>
+                <view class="weui-flex">
+                    <view class="weui-media-box weui-flex__item">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <span class="book-name">农门小娇妻</span>
+                        </view>
+                    </view>
+                    <view class="weui-media-box weui-flex__item">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <span class="book-name">农门小娇妻</span>
+                        </view>
+                    </view>
+                    <view class="weui-media-box weui-flex__item">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <span class="book-name">农门小娇妻</span>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <!-- 排行榜 -->
+            <view class="section-bd image-text smaller section-bd">
+                <view class="bd-title">排行榜</view>
+                <view class="weui-panel__bd">
+                    <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <view class="weui-media-box__title">
+                                <strong class="rank-color_1">TOP.1</strong> 标题一</view>
+                            <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                        </view>
+                    </a>
+                </view>
+                <view class="weui-panel__bd">
+                    <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <view class="weui-media-box__title">
+                                <strong class="rank-color_2">TOP.2</strong> 标题一</view>
+                            <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                        </view>
+                    </a>
+                </view>
+                <view class="weui-panel__bd">
+                    <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <view class="weui-media-box__title">
+                                <strong class="rank-color_3">TOP.3</strong> 标题一</view>
+                            <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                        </view>
+                    </a>
+                </view>
+                <view class="weui-panel__bd">
+                    <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <view class="weui-media-box__title">
+                                <strong>TOP.4</strong> 标题一</view>
+                            <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                        </view>
+                    </a>
+                </view>
+                <view class="weui-panel__bd">
+                    <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                        <view class="weui-media-box__hd">
+                            <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                        </view>
+                        <view class="weui-media-box__bd">
+                            <view class="weui-media-box__title">
+                                <strong>TOP.5</strong> 标题一</view>
+                            <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                        </view>
+                    </a>
                 </view>
             </view>
         </view>
-    </view>
 
+    </view>
 </template>
 
 <script>

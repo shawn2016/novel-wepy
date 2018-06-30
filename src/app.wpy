@@ -1,10 +1,14 @@
 <style lang="less">
-@import './zanui/index.wxss';
+// @import './zanui/index.wxss';
+@import 'assets/styles/jquery-weui.wxss';
+@import 'assets/styles/weui.wxss';
+
 @import 'assets/styles/app.less';
 page {
   height: 100%;
   background-color: #efeff4;
 }
+
 .container {
   width: 100%;
 }
@@ -44,32 +48,32 @@ export default class extends wepy.app {
         {
           pagePath: 'pages/bookstore',
           text: '书城',
-          iconPath: 'assets/images/home-outline.png',
-          selectedIconPath: 'assets/images/home-selected.png'
+          iconPath: 'assets/images/tabnav/tab-library_ico-h.png',
+          selectedIconPath: 'assets/images/tabnav/tab-library_ico-h.png'
         },
         {
           pagePath: 'pages/free',
           text: '限免',
-          iconPath: 'assets/images/contacts-outline.png',
-          selectedIconPath: 'assets/images/contacts-selected.png'
+          iconPath: 'assets/images/tabnav/tab-library_ico-h.png',
+          selectedIconPath: 'assets/images/tabnav/tab-library_ico-h.png'
         },
         {
           pagePath: 'pages/recharge',
           text: '充值',
-          iconPath: 'assets/images/settings-outline.png',
-          selectedIconPath: 'assets/images/settings-selected.png'
+          iconPath: 'assets/images/tabnav/tab-library_ico-h.png',
+          selectedIconPath: 'assets/images/tabnav/tab-library_ico-h.png'
         },
         {
           pagePath: 'pages/books',
           text: '书库',
-          iconPath: 'assets/images/settings-outline.png',
-          selectedIconPath: 'assets/images/settings-selected.png'
+          iconPath: 'assets/images/tabnav/tab-library_ico-h.png',
+          selectedIconPath: 'assets/images/tabnav/tab-library_ico-h.png'
         },
         {
           pagePath: 'pages/mine',
           text: '我的',
-          iconPath: 'assets/images/settings-outline.png',
-          selectedIconPath: 'assets/images/settings-selected.png'
+          iconPath: 'assets/images/tabnav/tab-library_ico-h.png',
+          selectedIconPath: 'assets/images/tabnav/tab-library_ico-h.png'
         }
       ]
     }

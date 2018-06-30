@@ -1,6 +1,195 @@
 <template>
     <view class="container">
-        Mine
+        <view class="weui-tab My">
+            <view class="weui-tab__bd">
+                <view id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+                    <view class="my-header">
+                        <view class="weui-panel__bd">
+                            <view href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+                                <view class="weui-media-box__hd avatar">
+                                    <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/default-avatar.png" alt="">
+                                </view>
+                                <view class="weui-media-box__bd">
+                                    <view class="weui-media-box__title">未登录</view>
+                                    <p class="weui-media-box__desc">登录更安全，可同步书籍，查看阅读时长</p>
+                                </view>
+                                <a href="javascript:;" class="signin">登陆</a>
+                            </view>
+                        </view>
+                        <view class="own-wrap">
+                            <view class="weui-flex">
+                                <view class="weui-flex__item">
+                                    <span>29202个</span>
+                                    <p>书币</p>
+                                </view>
+                                <view class="weui-flex__item">
+                                    <span>一小时</span>
+                                    <p>阅读时间</p>
+                                </view>
+                                <view class="weui-flex__item">
+                                    <a href="javascript:;">
+                                        <span>签到</span>
+                                        <p>送金币</p>
+                                    </a>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="main">
+                        <view class="ad-wrap">
+                            <image src="https://wxstatic.778mk.com/wxstatic/template/images/temp/ad/ad_01.jpg" alt="">
+                        </view>
+                        <view class="weui-panel__bd my-list">
+                            <view class="weui-media-box weui-media-box_small-appmsg">
+                                <view class="weui-cells">
+                                    <a class="weui-cell weui-cell_access" href="javascript:;">
+                                        <view class="weui-cell__hd list recharge-ico"></view>
+                                        <view class="weui-cell__bd weui-cell_primary">
+                                            <p>充值</p>
+                                        </view>
+                                        <span class="weui-cell__ft">
+                                            充值送大礼
+                                        </span>
+                                    </a>
+                                    <a class="weui-cell weui-cell_access" href="javascript:;">
+                                        <view class="weui-cell__hd list history-ico"></view>
+                                        <view class="weui-cell__bd weui-cell_primary">
+                                            <p>阅读历史</p>
+                                        </view>
+                                        <span class="weui-cell__ft">
+                                        </span>
+                                    </a>
+                                    <a class="weui-cell weui-cell_access" href="javascript:;">
+                                        <view class="weui-cell__hd list coupon-ico"></view>
+                                        <view class="weui-cell__bd weui-cell_primary">
+                                            <p>优惠券</p>
+                                        </view>
+                                        <span class="weui-cell__ft">
+                                            3张未使用
+                                        </span>
+                                    </a>
+                                    <a class="weui-cell weui-cell_access" href="javascript:;">
+                                        <view class="weui-cell__hd list topic-ico"></view>
+                                        <view class="weui-cell__bd weui-cell_primary">
+                                            <p>活动</p>
+                                        </view>
+                                        <span class="weui-cell__ft">
+                                            新人大礼包
+                                        </span>
+                                    </a>
+                                    <a class="weui-cell weui-cell_access" href="javascript:;">
+                                        <view class="weui-cell__hd list gift-ico"></view>
+                                        <view class="weui-cell__bd weui-cell_primary">
+                                            <p>福利</p>
+                                        </view>
+                                        <span class="weui-cell__ft">
+                                            送书币
+                                        </span>
+                                    </a>
+                                    <a class="weui-cell weui-cell_access" href="javascript:;">
+                                        <view class="weui-cell__hd list collect-ico"></view>
+                                        <view class="weui-cell__bd weui-cell_primary">
+                                            <p>收藏</p>
+                                        </view>
+                                        <span class="weui-cell__ft">
+                                        </span>
+                                    </a>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="section-bd image-text section-bd">
+                            <view class="bd-title">今日必读
+                                <a href="#" class="more">更多 &gt;</a>
+                            </view>
+                            <view class="weui-panel__bd">
+                                <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                                    <view class="weui-media-box__hd">
+                                        <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                    </view>
+                                    <view class="weui-media-box__bd">
+                                        <view class="weui-media-box__title">标题一</view>
+                                        <view class="flag-wrap">
+                                            <span>火爆精品 主编力推
+                                                <span></span>
+                                            </span>
+                                        </view>
+                                        <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                                        <view class="ps-info">
+                                            <span>
+                                                <i>1000</i>书友在追</span>
+                                        </view>
+                                    </view>
+                                </a>
+                            </view>
+                            <view class="weui-flex">
+                                <view class="weui-media-box weui-flex__item">
+                                    <view class="weui-media-box__hd">
+                                        <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                    </view>
+                                    <view class="weui-media-box__bd">
+                                        <span class="book-name">农门小娇妻</span>
+                                    </view>
+                                </view>
+                                <view class="weui-media-box weui-flex__item">
+                                    <view class="weui-media-box__hd">
+                                        <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                    </view>
+                                    <view class="weui-media-box__bd">
+                                        <span class="book-name">农门小娇妻</span>
+                                    </view>
+                                </view>
+                                <view class="weui-media-box weui-flex__item">
+                                    <view class="weui-media-box__hd">
+                                        <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                    </view>
+                                    <view class="weui-media-box__bd">
+                                        <span class="book-name">农门小娇妻</span>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="section-bd image-text section-bd">
+                            <view class="bd-title">限时免费
+                                <view class="time-wrap">
+                                    <span class="hour">12</span>
+                                    <i>:</i>
+                                    <span class="minute">12</span>
+                                    <i>:</i>
+                                    <span class="second">21</span>
+                                </view>
+                                <a href="#" class="more">更多 &gt;</a>
+                            </view>
+                            <view class="weui-flex">
+                                <view class="weui-media-box weui-flex__item">
+                                    <view class="weui-media-box__hd">
+                                        <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                    </view>
+                                    <view class="weui-media-box__bd">
+                                        <span class="book-name">农门小娇妻</span>
+                                    </view>
+                                </view>
+                                <view class="weui-media-box weui-flex__item">
+                                    <view class="weui-media-box__hd">
+                                        <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                    </view>
+                                    <view class="weui-media-box__bd">
+                                        <span class="book-name">农门小娇妻</span>
+                                    </view>
+                                </view>
+                                <view class="weui-media-box weui-flex__item">
+                                    <view class="weui-media-box__hd">
+                                        <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                    </view>
+                                    <view class="weui-media-box__bd">
+                                        <span class="book-name">农门小娇妻</span>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
     </View>
 </template>
 

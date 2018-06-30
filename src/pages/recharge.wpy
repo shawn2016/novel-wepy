@@ -1,6 +1,141 @@
 <template>
     <view class="container">
-        Recharge
+        <view class="recharge-wrap Recharge">
+            <view class="recharge-top weui-flex button">
+                <span class="weui-flex__item">书币余额：
+                    <em>100</em>
+                </span>
+                <a href="javascript:;" class="weui-btn yellow-btn">赚金币</a>
+            </view>
+            <view class="recharge-box money">
+                <view class="money-list-wrap">
+                    <view class="money-recharge">
+                        <view class="money-list">
+                            <view class="money-sum">
+                                <em>29</em>元</view>
+                            <view class="money-book">3000书币</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="money-list-wrap">
+                    <view class="money-recharge">
+                        <view class="money-list">
+                            <view class="money-sum">
+                                <em>29</em>元</view>
+                            <view class="money-book">3000书币</view>
+                            <view class="money-gift">赠送30元</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="money-list-wrap">
+                    <view class="money-recharge">
+                        <view class="money-list">
+                            <view class="money-sum">
+                                <em>79</em>元</view>
+                            <view class="money-book">7900+6100书币</view>
+                            <view class="money-gift">赠送60元</view>
+                            <span class="hot-ico"></span>
+                        </view>
+                    </view>
+                </view>
+                <view class="money-list-wrap">
+                    <view class="money-recharge">
+                        <view class="money-list">
+                            <view class="money-book">半年vip</view>
+                            <view class="money-sum">
+                                <em>179</em>元/半年</view>
+                            <view class="ps-info">半年小说无限看</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-cells discounts">
+                <a class="weui-cell weui-cell_access" href="javascript:;">
+                    <view class="weui-cell__bd">
+                        <p>
+                            <em>优惠券</em> (可直接抵用充值费用)</p>
+                    </view>
+                    <view class="weui-cell__ft">
+                        <span>3张可用</span>
+                    </view>
+                </a>
+                <p class="ps-info">温馨提示：充值后可免费观看站内全部小视频哦</p>
+            </view>
+            <view class="btn-wrap">
+                <a href="javascript:;" class="weui-btn recharge-btn weui-btn_warn">确认充值</a>
+            </view>
+            <article class="weui-article">
+                <view>温馨提示</view>
+                <p>1、用户使用书币购买收费章节，后续重复阅读无需重复购买。</p>
+                <p>2、由于小说书币为特殊虚拟商品，一旦购买成即可开始享受部分及全部服务，因此不可退换，请购买时注意。</p>
+                <p>3、充值不成功或提示跨号支付，请选择微信扫码支付。</p>
+                <p>4、发现充值未到账时，请选确认你登录的账号与充值的账号是否一致。</p>
+                </p>
+            </article>
+        </view>
+        <view class="shade-wrap"></view>
+        <view class="pop-wrap pop-recharge Coupon">
+            <span class="close-ico"></span>
+            <view>使用红包</view>
+            <view class="pop-bd">
+                <view class="weui-panel__bd">
+                    <view class="weui-media-box weui-media-box_text">
+                        <view class="weui-flex">
+                            <view class="coupon-info">
+                                <view class="coupon-symbol">
+                                    <view class="coupon-title">
+                                        <sup>¥</sup>
+                                        <span>5</span>
+                                    </view>
+                                    <p>满5元可用</p>
+                                </view>
+                            </view>
+                            <view class="weui-flex__item">
+                                <view class="weui-media-box__title">充值红包</view>
+                                <p class="weui-media-box__desc">红包有效期至2018.12.31</p>
+                            </view>
+                            <a class="btn normal" href="javascript:;">去完成</a>
+                        </view>
+                    </view>
+                    <view class="weui-media-box weui-media-box_text">
+                        <view class="weui-flex">
+                            <view class="coupon-info">
+                                <view class="coupon-symbol">
+                                    <view class="coupon-title">
+                                        <sup>¥</sup>
+                                        <span>5</span>
+                                    </view>
+                                    <p>满5元可用</p>
+                                </view>
+                            </view>
+                            <view class="weui-flex__item">
+                                <view class="weui-media-box__title">充值红包</view>
+                                <p class="weui-media-box__desc">红包有效期至2018.12.31</p>
+                            </view>
+                            <a class="btn normal" href="javascript:;">去完成</a>
+                        </view>
+                    </view>
+                    <view class="weui-media-box weui-media-box_text">
+                        <view class="weui-flex">
+                            <view class="coupon-info">
+                                <view class="coupon-symbol">
+                                    <view class="coupon-title">
+                                        <sup>¥</sup>
+                                        <span>5</span>
+                                    </view>
+                                    <p>满5元可用</p>
+                                </view>
+                            </view>
+                            <view class="weui-flex__item">
+                                <view class="weui-media-box__title">充值红包</view>
+                                <p class="weui-media-box__desc">红包有效期至2018.12.31</p>
+                            </view>
+                            <a class="btn normal" href="javascript:;">去完成</a>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
     </View>
 </template>
 
