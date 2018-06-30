@@ -41,39 +41,39 @@ export default class extends wepy.app {
     },
     tabBar: {
       color: '#929292',
-      selectedColor: '#ff9630',
+      selectedColor: '#77a9fd',
       backgroundColor: '#f7f7f8',
       borderStyle: 'white',
       list: [
         {
           pagePath: 'pages/bookstore',
           text: '书城',
-          iconPath: 'assets/images/tabnav/tab-library_ico-h.png',
+          iconPath: 'assets/images/tabnav/tab-library_ico.png',
           selectedIconPath: 'assets/images/tabnav/tab-library_ico-h.png'
         },
         {
           pagePath: 'pages/free',
           text: '限免',
-          iconPath: 'assets/images/tabnav/tab-library_ico-h.png',
-          selectedIconPath: 'assets/images/tabnav/tab-library_ico-h.png'
+          iconPath: 'assets/images/tabnav/tab-free_ico.png',
+          selectedIconPath: 'assets/images/tabnav/tab-free_ico-h.png'
         },
         {
           pagePath: 'pages/recharge',
           text: '充值',
-          iconPath: 'assets/images/tabnav/tab-library_ico-h.png',
-          selectedIconPath: 'assets/images/tabnav/tab-library_ico-h.png'
+          iconPath: 'assets/images/tabnav/tab-found_ico.png',
+          selectedIconPath: 'assets/images/tabnav/tab-found_ico-h.png'
         },
         {
           pagePath: 'pages/books',
           text: '书库',
-          iconPath: 'assets/images/tabnav/tab-library_ico-h.png',
-          selectedIconPath: 'assets/images/tabnav/tab-library_ico-h.png'
+          iconPath: 'assets/images/tabnav/tab-small-library_ico.png',
+          selectedIconPath: 'assets/images/tabnav/tab-small-library_ico-h.png'
         },
         {
           pagePath: 'pages/mine',
           text: '我的',
-          iconPath: 'assets/images/tabnav/tab-library_ico-h.png',
-          selectedIconPath: 'assets/images/tabnav/tab-library_ico-h.png'
+          iconPath: 'assets/images/tabnav/tab-my_ico.png',
+          selectedIconPath: 'assets/images/tabnav/tab-my_ico-h.png'
         }
       ]
     }
