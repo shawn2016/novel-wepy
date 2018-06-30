@@ -1,0 +1,14 @@
+<template>
+    <view class="container">
+        Books
+    </View>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class Books extends wepy.page {}
+</script>
+
+<style>
+</style>

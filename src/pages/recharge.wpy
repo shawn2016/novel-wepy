@@ -1,0 +1,14 @@
+<template>
+    <view class="container">
+        Recharge
+    </View>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class Recharge extends wepy.page {}
+</script>
+
+<style>
+</style>

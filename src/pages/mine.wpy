@@ -1,0 +1,14 @@
+<template>
+    <view class="container">
+        Mine
+    </View>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class Mine extends wepy.page {}
+</script>
+
+<style>
+</style>

@@ -1,0 +1,254 @@
+<template>
+    <view class="container">
+        <view class="container-top">
+            <!-- 搜索框 -->
+            <view class="search-bar">
+                <image src="../assets/images/home/search.png" class="search-icon">
+                    <input type='text' placeholder='搜索书名...' />
+                    <view class="search-text">
+                        搜索
+                    </view>
+            </view>
+        </view>
+        <!-- 顶部菜单 -->
+        <view class="container-menu">
+            <view class="menu-item active">
+                <a href="">精选</a>
+            </view>
+            <view class="menu-item">
+                <a href="">男生</a>
+            </view>
+            <view class="menu-item">
+                <a href="">女生</a>
+            </view>
+            <view class="menu-item">
+                <a href="">书库</a>
+            </view>
+            <view class="menu-item">
+                <a href="">听书</a>
+            </view>
+
+        </view>
+        <view class="container-layout">
+
+            <!-- 轮播 -->
+            <swiper class="swiper-top" indicator-dots="{{indicatorDots}}" circular autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+                <repeat item="item" key="index" index="index" for="{{imgUrls}}">
+                    <swiper-item>
+                        <image src="{{item}}" class="slide-image" width="100%" height="150">
+                    </swiper-item>
+                </repeat>
+            </swiper>
+            <!-- 项目类别 -->
+            <view class="pro-kind">
+                <view class="item">
+                    <image src="../assets/images/home/home.png" class="slide-image">
+                        排行榜
+                </view>
+                <view class="item">
+                    <image src="../assets/images/home/home.png" class="slide-image">
+                        排行榜
+                </view>
+                <view class="item">
+                    <image src="../assets/images/home/home.png" class="slide-image">
+                        排行榜
+                </view>
+                <view class="item">
+                    <image src="../assets/images/home/home.png" class="slide-image">
+                        排行榜
+                </view>
+                <view class="item">
+                    <image src="../assets/images/home/home.png" class="slide-image">
+                        排行榜
+                </view>
+            </view>
+
+            <!-- 阅读记录 -->
+            <view class="container-panel">
+                <view class="clearfix">
+                    <view class="title">
+                        阅读记录
+                    </view>
+                    <!-- <view class="more">
+            更多 >
+          </view> -->
+                </view>
+                <swiper class="swiper-reader" circular indicator-dots="{{indicatorDots}}" interval="{{interval}}" duration="{{duration}}">
+                    <repeat item="item" key="index" index="index" for="{{readerData}}">
+                        <swiper-item>
+                            <image src="{{item.imgUrl}}" class="slide-image">
+                                <view class="right">
+                                    <view class="title">
+                                        {{item.title}}
+                                    </view>
+                                    <view class="subtitle">
+
+                                        阅读到
+                                        <text>{{item.num}}</text>
+                                        章
+                                    </view>
+                                    <view class="content">
+                                        {{item.content}}
+                                    </view>
+                                </view>
+                        </swiper-item>
+                    </repeat>
+                </swiper>
+            </view>
+
+            <!-- 听书频道 -->
+            <view class="container-panel">
+                <view class="clearfix">
+                    <view class="title">
+                        听书频道
+                    </view>
+                    <view class="more">
+                        更多 >
+                    </view>
+                </view>
+                <view class="book-list clearfix">
+                    <view class="item">
+                        <image src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=86172d1da744ad343ab28fd5b1cb6791/0ff41bd5ad6eddc446ee3b0b3fdbb6fd52663330.jpg" class="book-image">
+                            哈哈好
+                    </view>
+                    <view class="item">
+                        <image src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=86172d1da744ad343ab28fd5b1cb6791/0ff41bd5ad6eddc446ee3b0b3fdbb6fd52663330.jpg" class="book-image">
+                            哈哈好
+                    </view>
+                    <view class="item">
+                        <image src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=86172d1da744ad343ab28fd5b1cb6791/0ff41bd5ad6eddc446ee3b0b3fdbb6fd52663330.jpg" class="book-image">
+                            哈哈好
+                    </view>
+                    <view class="item">
+                        <image src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=86172d1da744ad343ab28fd5b1cb6791/0ff41bd5ad6eddc446ee3b0b3fdbb6fd52663330.jpg" class="book-image">
+                            哈哈好
+                    </view>
+                    <view class="item">
+                        <image src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=86172d1da744ad343ab28fd5b1cb6791/0ff41bd5ad6eddc446ee3b0b3fdbb6fd52663330.jpg" class="book-image">
+                            哈哈好
+                    </view>
+                    <view class="item">
+                        <image src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=86172d1da744ad343ab28fd5b1cb6791/0ff41bd5ad6eddc446ee3b0b3fdbb6fd52663330.jpg" class="book-image">
+                            哈哈好
+                    </view>
+                    <view class="item">
+                        <image src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=86172d1da744ad343ab28fd5b1cb6791/0ff41bd5ad6eddc446ee3b0b3fdbb6fd52663330.jpg" class="book-image">
+                            哈哈好
+                    </view>
+                    <view class="item">
+                        <image src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=86172d1da744ad343ab28fd5b1cb6791/0ff41bd5ad6eddc446ee3b0b3fdbb6fd52663330.jpg" class="book-image">
+                            哈哈好
+                    </view>
+                    <view class="item">
+                        <image src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=86172d1da744ad343ab28fd5b1cb6791/0ff41bd5ad6eddc446ee3b0b3fdbb6fd52663330.jpg" class="book-image">
+                            哈哈好
+                    </view>
+                </view>
+            </view>
+
+            <!-- 限时免费 -->
+            <view class="container-panel">
+                <view class="clearfix">
+                    <view class="title">
+                        限时免费
+                    </view>
+                    <view class="time-back">
+                        <view class="h">
+                            88
+                        </view>
+                        <view>
+                            :
+                        </view>
+                        <view class="h">
+                            88
+                        </view>
+                        <view>
+                            :
+                        </view>
+                        <view class="h">
+                            88
+                        </view>
+                    </view>
+                    <!-- <view class="more">
+            更多 >
+          </view> -->
+                </view>
+                <view class="book-list clearfix">
+                    <view class="item">
+                        <image src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=86172d1da744ad343ab28fd5b1cb6791/0ff41bd5ad6eddc446ee3b0b3fdbb6fd52663330.jpg" class="book-image">
+                            哈哈好
+                    </view>
+                    <view class="item">
+                        <image src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=86172d1da744ad343ab28fd5b1cb6791/0ff41bd5ad6eddc446ee3b0b3fdbb6fd52663330.jpg" class="book-image">
+                            哈哈好
+                    </view>
+                    <view class="item">
+                        <image src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=86172d1da744ad343ab28fd5b1cb6791/0ff41bd5ad6eddc446ee3b0b3fdbb6fd52663330.jpg" class="book-image">
+                            哈哈好
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class Bookstore extends wepy.page {
+  data = {
+    imgUrls: [
+      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
+      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
+      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
+    ],
+    indicatorDots: false,
+    autoplay: true,
+    interval: 5000,
+    circular: true,
+    duration: 1000,
+    readerData: [
+      {
+        imgUrl:
+          'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+        title: '文件夹',
+        num: 1,
+        content: '哈哈好'
+      },
+      {
+        imgUrl:
+          'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+        title: '文件夹',
+        num: 1,
+        content: '哈哈好'
+      }
+    ]
+  }
+
+  changeIndicatorDots(e) {
+    this.setData({
+      indicatorDots: !this.data.indicatorDots
+    })
+  }
+  changeAutoplay(e) {
+    this.setData({
+      autoplay: !this.data.autoplay
+    })
+  }
+  intervalChange(e) {
+    this.setData({
+      interval: e.detail.value
+    })
+  }
+  durationChange(e) {
+    this.setData({
+      duration: e.detail.value
+    })
+  }
+}
+</script>
+
+<style lang="less" >
+@import '../assets/styles/bookstore.less';
+</style>

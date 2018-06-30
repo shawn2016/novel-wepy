@@ -1,11 +1,12 @@
 <style lang="less">
-.container {
+@import './zanui/index.wxss';
+@import 'assets/styles/app.less';
+page {
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
+  background-color: #efeff4;
+}
+.container {
+  width: 100%;
 }
 </style>
 
@@ -15,20 +16,62 @@ import 'wepy-async-function'
 
 import { setStore } from 'wepy-redux'
 import configStore from './store'
-
 const store = configStore()
 setStore(store)
 
 export default class extends wepy.app {
   config = {
     pages: [
-      'pages/index'
+      'pages/bookstore',
+      'pages/free',
+      'pages/recharge',
+      'pages/books',
+      'pages/mine'
     ],
     window: {
-      backgroundTextStyle: 'light',
+      backgroundColor: '#fff',
+      backgroundTextStyle: 'black',
       navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
+      navigationBarTitleText: '梦幻九天书阁',
       navigationBarTextStyle: 'black'
+    },
+    tabBar: {
+      color: '#929292',
+      selectedColor: '#ff9630',
+      backgroundColor: '#f7f7f8',
+      borderStyle: 'white',
+      list: [
+        {
+          pagePath: 'pages/bookstore',
+          text: '书城',
+          iconPath: 'assets/images/home-outline.png',
+          selectedIconPath: 'assets/images/home-selected.png'
+        },
+        {
+          pagePath: 'pages/free',
+          text: '限免',
+          iconPath: 'assets/images/contacts-outline.png',
+          selectedIconPath: 'assets/images/contacts-selected.png'
+        },
+        {
+          pagePath: 'pages/recharge',
+          text: '充值',
+          iconPath: 'assets/images/settings-outline.png',
+          selectedIconPath: 'assets/images/settings-selected.png'
+        },
+        {
+          pagePath: 'pages/books',
+          text: '书库',
+          iconPath: 'assets/images/settings-outline.png',
+          selectedIconPath: 'assets/images/settings-selected.png'
+        },
+        {
+          pagePath: 'pages/mine',
+          text: '我的',
+          iconPath: 'assets/images/settings-outline.png',
+          selectedIconPath: 'assets/images/settings-selected.png'
+        }
+      ]
     }
   }
 
@@ -36,16 +79,17 @@ export default class extends wepy.app {
     userInfo: null
   }
 
-  constructor () {
+  constructor() {
     super()
     this.use('requestfix')
+    this.use('promisify')
   }
 
   onLaunch() {
     this.testAsync()
   }
 
-  sleep (s) {
+  sleep(s) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve('promise resolved')
@@ -53,7 +97,7 @@ export default class extends wepy.app {
     })
   }
 
-  async testAsync () {
+  async testAsync() {
     const data = await this.sleep(3)
     console.log(data)
   }
@@ -64,7 +108,7 @@ export default class extends wepy.app {
       return this.globalData.userInfo
     }
     wepy.getUserInfo({
-      success (res) {
+      success(res) {
         that.globalData.userInfo = res.userInfo
         cb && cb(res.userInfo)
       }
