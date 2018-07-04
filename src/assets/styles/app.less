@@ -77,7 +77,7 @@ input {
 }
 
 .container {
-    background: #f3f3f3;
+    // background: #f3f3f3;
     border-top: 1px solid #e5e5e5;
 }
 
@@ -1473,12 +1473,22 @@ input {
     align-items: center;
 }
 
-.audio .process-time, .audio .totle-time {
-    padding: 0.4*40rpx 0;
+.audio .process-time {
+    padding: 12rpx 0;
     font-size: 0.5*40rpx;
     color: #000;
-    display: block;
-    width: 1.5*40rpx;
+    // display: block;
+    float: left;
+    margin-top: -30rpx;
+}
+
+.audio .totle-time {
+    padding: 12rpx 0;
+    font-size: 0.5*40rpx;
+    color: #000;
+    // display: block;
+    float: right;
+    margin-top: -30rpx;
 }
 
 .audio .handle {

@@ -1,0 +1,166 @@
+<template>
+    <view class="container">
+        <view class="weui-tab Listen">
+            <view class="weui-tab__bd">
+                <view class="weui-tab__bd-item weui-tab__bd-item--active">
+                    <view class="main">
+                        <view class="section-bd image-text section-bd">
+                            <view class="weui-panel__bd">
+                                <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                                    <view class="weui-media-box__hd">
+                                        <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                    </view>
+                                    <view class="weui-media-box__bd">
+                                        <view class="weui-media-box__title weui-flex">
+                                            <span class="textoverflow">标题一</span>
+                                            <view class="flag-wrap inline">
+                                                <span>火爆精品 主编力推
+                                                    <span></span>
+                                                </span>
+                                            </view>
+                                        </view>
+                                        <view class="free-time">
+                                            <span>限免时间：3月18日～3月28日</span>
+                                        </view>
+                                        <view class="read-sum">
+                                            <i>1022</i>人阅读</view>
+                                        <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                                    </view>
+                                </a>
+                            </view>
+                        </view>
+                        <view class="section-bd image-text section-bd">
+                            <view class="bd-title listen-details-title">音乐播放器</view>
+                            <view class="audio">
+                                <!-- <audio></audio> -->
+                                <!-- <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio>
+                                <view class="weui-flex">
+                                    <span class="process-time">00:00</span>
+                                    <view class="weui-flex__item" style="position: relative;">
+                                        <view class="weui-slider" id="slider1">
+                                            <view class="weui-slider__inner">
+                                                <view style="width: 0%;" class="weui-slider__track"></view>
+                                                <view style="left: 0%;" class="weui-slider__handler"></view>
+                                            </view>
+                                        </view>
+                                    </view>
+                                    <span class="totle-time">00:00</span>
+                                </view> -->
+                                <view class="slider">
+                                    <view class="section section_gap">
+                                        <view class="body-view">
+                                            <slider bindchange="slider3change" block-size="12" value="{{sumduration}}" activeColor="#333333" />
+                                            <text class="process-time">00:00</text>
+                                            <text class="totle-time">00:00</text>
+                                        </view>
+                                    </view>
+                                </view>
+                                <view class="weui-flex handle">
+                                    <view class="weui-flex__item flex">
+                                        <span @tap="prev" data-action='volume' class="audio-handle volume-voice-ico"></span>
+                                    </view>
+                                    <view class="weui-flex__item flex">
+                                        <span data-action='prev' class="audio-handle prev-ico"></span>
+                                    </view>
+                                    <view class="weui-flex__item flex">
+                                        <span class="audio-play switch-ico">
+                                            <span data-action='play' :class="play ? 'pause-ico' : 'play-ico' " class="audio-handle"></span>
+                                        </span>
+                                    </view>
+                                    <view class="weui-flex__item flex">
+                                        <span data-action='next' class="audio-handle next-ico"></span>
+                                    </view>
+                                    <view class="weui-flex__item flex">
+                                        <span class="audio-handle catalog-ico"></span>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="ad-wrap mid">
+                            <image src="https://wxstatic.778mk.com/wxstatic/template/images/temp/ad/ad_04.jpg" alt="">
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </View>
+</template>
+
+<script>
+import wepy from 'wepy'
+import Common from 'utils/music'
+export default class XiaoshuoCover extends wepy.page {
+  config = {
+    navigationBarTitleText: '限免-书仙阁'
+  }
+  onReady(e) {
+    this.audioCtx = wx.createAudioContext('myAudio')
+  }
+  onLoad() {}
+  data = {
+    name: 'tets',
+    play: false,
+    mp3Url:
+      'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46',
+    picUrl:
+      'http://p1.music.126.net/34YW1QtKxJ_3YnX9ZzKhzw==/2946691234868155.jpg',
+    singer: 'zx'
+  }
+  slider3change(e) {
+    sliderToseek(e, function(dataUrl, cal) {
+      console.log(dataUrl, cal)
+      wx.playBackgroundAudio({
+        dataUrl: dataUrl
+      })
+      wx.seekBackgroundAudio({
+        position: cal
+      })
+    })
+  }
+  onShow() {
+    Common.playMusic(this.mp3Url, this.name, this.picUrl)
+  }
+  prev() {
+    console.log('上一首')
+    prevSong(this)
+  }
+}
+// 上一曲
+function prevSong(that) {
+  const id = that.data.id
+  console.log('id', id)
+  wx.getStorage({
+    key: 'searchReault',
+    success: function(res) {
+      console.log(res.data)
+      let currentSongIndex = res.data.findIndex(item => {
+        return item.id === id
+      })
+      console.log(currentSongIndex)
+      currentSongIndex--
+      console.log(res.data[currentSongIndex])
+      wx.playBackgroundAudio({
+        dataUrl: res.data[currentSongIndex].mp3Url
+      })
+      wx.switchTab({
+        url: '../now/index'
+      })
+    }
+  })
+}
+// 滑动 歌曲快进
+function sliderToseek(e, cb) {
+  wx.getBackgroundAudioPlayerState({
+    success: function(res) {
+      const dataUrl = res.dataUrl
+      const duration = res.duration
+      const val = e.detail.value
+      const cal = val * duration / 100
+      cb && cb(dataUrl, cal)
+    }
+  })
+}
+</script>
+
+<style>
+</style>

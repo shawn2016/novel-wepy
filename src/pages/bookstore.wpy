@@ -467,6 +467,7 @@
 
 <script>
 import wepy from 'wepy'
+import req from '@/network'
 
 export default class Bookstore extends wepy.page {
   config = {
@@ -519,6 +520,16 @@ export default class Bookstore extends wepy.page {
   durationChange(e) {
     this.setData({
       duration: e.detail.value
+    })
+  }
+  onLoad() {
+    this.getContacts()
+  }
+
+  getContacts() {
+    req.get('/test').then(res => {
+      console.log(res)
+      this.$apply()
     })
   }
 }

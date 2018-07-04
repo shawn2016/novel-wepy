@@ -1,0 +1,258 @@
+<template>
+    <view class="container">
+        <!--index.wxml-->
+        <view class="bg" style=" background-image: url({{poster}});filter: blur(20px); position: absolute;left:0;top:0;right:0;bottom:0;opacity: 0.4;z-index: 0;"></view>
+        <!--歌曲圆圈信息-->
+        <view class="container-content">
+            <view class="fengmian" hidden="{{!islyric}}" @tap="showlyric">
+                <view class="cicle-infor" style=" background-image: url({{poster}})">
+                </view>
+            </view>
+            <!--歌词-->
+            <view class="lyric-content" hidden="{{islyric}}" style="height:401px; overflow-y: scroll;" @tap="showCircle">
+                <view class="lyric" style="overflow-y: scroll;">
+                    <block item="item" key="index" index="index" for="{{lyricArr}}">
+                        <view> {{item}} </view>
+                    </block>
+                </view>
+            </view>
+
+            <!--选择操作-->
+            <view class="other-content">
+                <view class="icon-choose">
+                    <view class="download icon"></view>
+                    <view class="like icon"></view>
+                    <view class="add icon" @tap="addsong"></view>
+                </view>
+                <!--滑动条-->
+                <view class="slider">
+                    <view class="section section_gap">
+                        <view class="body-view">
+                            <slider bindchange="slider3change" value="{{sumduration}}" show-value activeColor="#333333" />
+                        </view>
+                    </view>
+                </view>
+                <!--上一曲 下一曲操作-->
+                <view class="operations">
+                    <view class="prev btn" @tap="prev">上一首</view>
+                    <view class="play btn" @tap="audioPlay" hidden="{{isplaying}}"></view>
+                    <view class="pause btn" @tap="audioPause" hidden="{{!isplaying}}"></view>
+                    <view class="next btn" @tap="next">下一首</view>
+                </view>
+            </view>
+        </view>
+        <view class="lists" style="transform: translateY({{percent}})">
+            <radio-group class="radio-group" bindchange="radioChange">
+                <label class="radio" item="item" key="index" index="index" for="{{items}}">
+                    <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+                </label>
+            </radio-group>
+        </view>
+    </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+import Common from 'utils/music'
+export default class ListenCom extends wepy.page {
+  config = {
+    navigationBarTitleText: '播放器'
+  }
+  data = {
+    id: 436514312,
+    name: '成都',
+    src:
+      'http://m2.music.126.net/7o5D4dA6271VktgawcbZFA==/18665309393829604.mp3',
+    poster:
+      'http://p1.music.126.net/34YW1QtKxJ_3YnX9ZzKhzw==/2946691234868155.jpg',
+    author: '赵雷',
+    isplaying: true,
+    islyric: false,
+    sumduration: 0,
+    lyricobj: {},
+    lyricArr: [],
+    isadd: false,
+    items: [
+      { name: 'recent', value: '最近' },
+      { name: 'like', value: '我的收藏' }
+    ],
+    percent: '100%'
+  }
+  addsong() {
+    this.setData({
+      percent: '0'
+    })
+  }
+  radioChange(e) {
+    console.log('radio发生change事件，携带value值为：', e.detail.value)
+    this.setData({
+      percent: '100%'
+    })
+  }
+  // 事件处理函数
+  bindViewTap() {
+    wx.navigateTo({
+      url: '../logs/logs'
+    })
+  }
+  showCircle() {
+    this.setData({
+      islyric: true,
+      percent: '100%'
+    })
+  }
+  showlyric() {
+    this.setData({
+      islyric: false,
+      percent: '100%'
+    })
+  }
+  onLoad() {
+    wx.showLoading({
+      title: '加载中',
+      mask: true
+    })
+    console.log('正在播放 onLoad')
+    const that = this
+    // 调用应用实例的方法获取全局数据
+    this.$parent.getUserInfo(function(userInfo) {
+      // 更新数据
+      that.setData({
+        userInfo: userInfo
+      })
+    })
+    wx.setNavigationBarTitle({
+      title: '正在播放'
+    })
+  }
+  onShow() {
+    const that = this
+    wx.setStorageSync('clickdata', {
+      id: '222',
+      name: 'tets',
+      mp3Url:
+        'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46',
+      picUrl:
+        'http://p1.music.126.net/34YW1QtKxJ_3YnX9ZzKhzw==/2946691234868155.jpg',
+      singer: 'zx'
+    })
+    Common.asyncGetStorage('clickdata') // 本地缓存
+      .then(data => {
+        // console.log(data)
+        if (!data) return
+        that.setData({
+          id: data.id,
+          name: data.name,
+          src: data.mp3Url,
+          poster: data.picUrl,
+          author: data.singer
+        })
+        return Common.playMusic(data.mp3Url, data.name, data.picUrl)
+      })
+      .then(status => {
+        if (!status) return
+        wx.hideLoading()
+        console.log('id,', that.data.id)
+        return Common.getlyric(that.data.id)
+      })
+      .then(lyricArr => {
+        console.log('lyricArr', lyricArr)
+        that.setData({
+          lyricArr: lyricArr
+        })
+        return Common.getMusicData()
+      })
+      .then(data => {
+        const tempduration = data.duration
+        console.log('get bg success', tempduration, data)
+        // 设置时长
+        console.log(tempduration)
+        that.setData({
+          sumduration: tempduration
+        })
+      })
+  }
+  audioPlay() {
+    // 背景音乐信息
+
+    wx.getBackgroundAudioPlayerState({
+      success(res) {
+        // const status = res.status
+        const dataUrl = res.dataUrl
+        const currentPosition = res.currentPosition
+        // const duration = res.duration
+        // const downloadPercent = res.downloadPercent
+        wx.playBackgroundAudio({
+          dataUrl: dataUrl
+        })
+        wx.seekBackgroundAudio({
+          position: currentPosition
+        })
+      }
+    })
+    this.setData({
+      isplaying: true
+    })
+  }
+  audioPause() {
+    wx.pauseBackgroundAudio()
+    this.setData({
+      isplaying: false
+    })
+  }
+  audio14() {}
+  audioStart() {}
+  slider3change(e) {
+    sliderToseek(e, function(dataUrl, cal) {
+      console.log(dataUrl, cal)
+      wx.playBackgroundAudio({
+        dataUrl: dataUrl
+      })
+      wx.seekBackgroundAudio({
+        position: cal
+      })
+    })
+  }
+  prev() {
+    prevSong(this)
+  }
+}
+// 上一曲
+function prevSong(that) {
+  const id = that.data.id
+  console.log('id', id)
+  wx.getStorage({
+    key: 'searchReault',
+    success: function(res) {
+      console.log(res.data)
+      let currentSongIndex = res.data.findIndex(item => {
+        return item.id === id
+      })
+      console.log(currentSongIndex)
+      currentSongIndex--
+      console.log(res.data[currentSongIndex])
+      wx.playBackgroundAudio({
+        dataUrl: res.data[currentSongIndex].mp3Url
+      })
+      wx.switchTab({
+        url: '../now/index'
+      })
+    }
+  })
+}
+// 滑动 歌曲快进
+function sliderToseek(e, cb) {
+  wx.getBackgroundAudioPlayerState({
+    success: function(res) {
+      const dataUrl = res.dataUrl
+      const duration = res.duration
+      const val = e.detail.value
+      const cal = val * duration / 100
+      cb && cb(dataUrl, cal)
+    }
+  })
+}
+</script>
+
+<style>
+</style>

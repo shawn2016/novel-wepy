@@ -15,21 +15,25 @@ page {
 <script>
 import wepy from 'wepy'
 import 'wepy-async-function'
-
+import req from '@/network'
 import { setStore } from 'wepy-redux'
 import configStore from './store'
+import * as interceptor from '@/network/interceptor'
+import { baseUrl } from '@/config'
 const store = configStore()
 setStore(store)
 
 export default class extends wepy.app {
   config = {
     pages: [
+      'pages/listen-detail',
+      'pages/listen-com',
       'pages/bookstore',
       'pages/free',
       'pages/recharge',
       'pages/books',
       'pages/mine',
-      'pages/xiaoshuo-cover'
+      'pages/xiaoshuo-cover',
     ],
     window: {
       backgroundColor: '#fff',
@@ -41,7 +45,7 @@ export default class extends wepy.app {
     tabBar: {
       color: '#929292',
       selectedColor: '#77a9fd',
-      backgroundColor: '#f7f7f8',
+      backgroundColor: '#f3f3f3',
       borderStyle: 'white',
       list: [
         {
@@ -77,7 +81,7 @@ export default class extends wepy.app {
       ]
     }
   }
-
+  // 全局变量
   globalData = {
     userInfo: null
   }
@@ -87,35 +91,22 @@ export default class extends wepy.app {
     this.use('requestfix')
     this.use('promisify')
   }
-
   onLaunch() {
-    this.testAsync()
+    req.baseUrl(baseUrl).interceptor(interceptor.request, interceptor.response)
   }
 
-  sleep(s) {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve('promise resolved')
-      }, s * 1000)
-    })
-  }
-
-  async testAsync() {
-    const data = await this.sleep(3)
-    console.log(data)
-  }
-
-  getUserInfo(cb) {
-    const that = this
+  getUserInfo() {
     if (this.globalData.userInfo) {
-      return this.globalData.userInfo
+      return new Promise((resolve, reject) => {
+        resolve(this.globalData.userInfo)
+      })
+    } else {
+      return wepy.getUserInfo().then(res => {
+        console.log(res)
+        this.globalData.userInfo = res.userInfo
+        return res.userInfo
+      })
     }
-    wepy.getUserInfo({
-      success(res) {
-        that.globalData.userInfo = res.userInfo
-        cb && cb(res.userInfo)
-      }
-    })
   }
 }
 </script>
