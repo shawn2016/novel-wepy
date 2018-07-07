@@ -139,6 +139,53 @@
                     </view>
                 </view>
             </view>
+            <view class="pop-wrap">
+                <view class="h3">请选择打赏金额
+                    <i> (打赏后可获得同金额金币)</i>：</view>
+                <view class="ds-money">
+                    <view class="money-list selected">
+                        <p class="money">2元</p>
+                        <p class="book-money">(200书币)</p>
+                    </view>
+                    <view class="money-list">
+                        <p class="money">5元</p>
+                        <p class="book-money">(500书币)</p>
+                    </view>
+                    <view class="money-list">
+                        <p class="money">8元</p>
+                        <p class="book-money">(200书币)</p>
+                    </view>
+                    <view class="money-list">
+                        <p class="money">10元</p>
+                        <p class="book-money">(2020书币)</p>
+                    </view>
+                    <view class="money-list">
+                        <p class="money">200元</p>
+                        <p class="book-money">(2400书币)</p>
+                    </view>
+                    <view class="money-list">
+                        <p class="money">2000元</p>
+                        <p class="book-money">(2400书币)</p>
+                    </view>
+                    <view class="money-list">
+                        <p class="money">1000元</p>
+                        <p class="book-money">(200书币)</p>
+                    </view>
+                    <view class="money-list">
+                        <p class="money">222元</p>
+                        <p class="book-money">(23300书币)</p>
+                    </view>
+                    <view class="money-list">
+                        <p class="money">2333元</p>
+                        <p class="book-money">(23300书币)</p>
+                    </view>
+                </view>
+                <view class="btn-wrap weui-flex button">
+                    <a href="javascript:;" class="weui-btn default-btn weui-btn_mini cancel-btn">取消</a>
+                    <a href="javascript:;" class="weui-btn red-btn ds-btn weui-btn_mini">打赏</a>
+                </view>
+            </view>
+
         </view>
     </View>
 </template>

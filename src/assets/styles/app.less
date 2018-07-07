@@ -1,36 +1,6 @@
-/** 
-* 小说 V1.2.0 
-* By Peter
-*/
-
-body, html {
-    height: 100%;
-    -webkit-tap-highlight-color: transparent;
-}
-
-p {
-    display: block;
-}
-
-body {
-    background: #f3f3f3;
-    -webkit-overflow-scrolling: touch;
-}
-
-a {
-    color: #333;
-}
-
-image {
-    display: inline;
-}
-
-input {
-    border: none;
-    outline: none;
-    border: 0;
-}
-
+@domain: 'https://wxstatic.778mk.com';
+@import './weui.less';
+@import './normal.less';
 .shade-wrap {
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
@@ -145,7 +115,7 @@ input {
     margin-top: 0.325*40rpx;
     width: 0.85*40rpx;
     height: 0.85*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/search-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/search-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -178,7 +148,7 @@ input {
     display: block;
     width: 1.15*40rpx;
     height: 1.15*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/classify-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/classify-ico.png') no-repeat;
     background-size: contain;
     margin-top: 0.175*40rpx;
 }
@@ -222,7 +192,7 @@ input {
     display: block;
     width: 0.425*40rpx;
     height: 0.5*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/hot-small-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/hot-small-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -304,27 +274,27 @@ input {
 }
 
 .main .select-menu-wrap .rank-ico {
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/select_menu-ico_1.png') no-repeat center;
+    background: url('@{domain}/wxstatic/template/images/select_menu-ico_1.png') no-repeat center;
     background-size: contain;
 }
 
 .main .select-menu-wrap .welfare-ico {
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/select_menu-ico_2.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/select_menu-ico_2.png') no-repeat;
     background-size: contain;
 }
 
 .main .select-menu-wrap .free-ico {
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/select_menu-ico_3.png') no-repeat center;
+    background: url('@{domain}/wxstatic/template/images/select_menu-ico_3.png') no-repeat center;
     background-size: contain;
 }
 
 .main .select-menu-wrap .pay-ico {
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/select_menu-ico_4.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/select_menu-ico_4.png') no-repeat;
     background-size: contain;
 }
 
 .main .select-menu-wrap .library-ico {
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/select_menu-ico_5.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/select_menu-ico_5.png') no-repeat;
     background-size: contain;
 }
 
@@ -469,7 +439,7 @@ input {
     display: inline-block;
     width: 0.325*40rpx;
     height: 0.55*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/gt-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/gt-ico.png') no-repeat;
     background-size: contain;
     position: relative;
     top: 0.05*40rpx;
@@ -552,7 +522,7 @@ input {
     margin-left: -0.75*40rpx;
     margin-top: -0.75*40rpx;
     z-index: 99;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/play-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/play-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -587,7 +557,7 @@ input {
     margin-bottom: 0.375*40rpx;
     width: 5.025*40rpx;
     height: 1.0*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/flag-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/flag-ico.png') no-repeat;
     background-size: contain;
     line-height: 1.0*40rpx;
     text-align: center;
@@ -694,8 +664,8 @@ input {
 }
 
 .weui-tabbar__icon {
-    width: 1.15*40rpx;
-    height: 1.15*40rpx;
+    width: 1.15*30rpx;
+    height: 1.15*30rpx;
     text-align: center;
 }
 
@@ -764,6 +734,7 @@ input {
 
 .Read-history .read-list span {
     color: #b2b2b2;
+    float: right;
 }
 
 .Library {
@@ -811,7 +782,7 @@ input {
 .Library .weui-pull-to-refresh .weui-pull-to-refresh__layer .weui-pull-to-refresh__arrow {
     width: 0.35*40rpx;
     height: 0.5*40rpx;
-    background-image: url('https://wxstatic.778mk.com/wxstatic/template/images/pull-refresh-ico.png');
+    background-image: url('@{domain}/wxstatic/template/images/pull-refresh-ico.png');
     background-size: contain;
     vertical-align: -1px;
 }
@@ -944,7 +915,7 @@ input {
     display: inline-block;
     width: 0.675*40rpx;
     height: 0.625*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/comment-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/comment-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -1028,17 +999,17 @@ input {
 }
 
 .Listen .avatar .king-rank.one, .Recharge .avatar .king-rank.one {
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/king-one-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/king-one-ico.png') no-repeat;
     background-size: contain;
 }
 
 .Listen .avatar .king-rank.two, .Recharge .avatar .king-rank.two {
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/king-two-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/king-two-ico.png') no-repeat;
     background-size: contain;
 }
 
 .Listen .avatar .king-rank.three, .Recharge .avatar .king-rank.three {
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/king-three-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/king-three-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -1173,13 +1144,13 @@ input {
     height: auto;
 }
 
-.Listen .pop-wrap h3 {
+.Listen .pop-wrap .h3 {
     font-weight: normal;
     font-size: 0.6*40rpx;
     color: #333;
 }
 
-.Listen .pop-wrap h3 i {
+.Listen .pop-wrap .h3 i {
     font-style: normal;
     color: #b2b2b2;
 }
@@ -1333,7 +1304,7 @@ input {
     left: 0.25*40rpx;
     width: 0.825*40rpx;
     height: 1.05*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/hot-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/hot-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -1451,7 +1422,7 @@ input {
     height: 0.45*40rpx;
     margin-top: -5px;
     margin-left: -10px;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/audio/drag-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/audio/drag-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -1473,22 +1444,24 @@ input {
     align-items: center;
 }
 
+.audio .process-slider {
+    margin: 0 80rpx;
+}
+
 .audio .process-time {
-    padding: 12rpx 0;
     font-size: 0.5*40rpx;
     color: #000;
     // display: block;
     float: left;
-    margin-top: -30rpx;
+    margin-top: -33rpx;
 }
 
 .audio .totle-time {
-    padding: 12rpx 0;
     font-size: 0.5*40rpx;
     color: #000;
     // display: block;
     float: right;
-    margin-top: -30rpx;
+    margin-top: -33rpx;
 }
 
 .audio .handle {
@@ -1505,7 +1478,7 @@ input {
     top: -0.25*40rpx;
     width: 5.625*40rpx;
     height: 6.425*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/audio/switch-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/audio/switch-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -1513,7 +1486,7 @@ input {
     position: relative;
     width: 0.75*40rpx;
     height: 0.75*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/audio/volume-voice-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/audio/volume-voice-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -1521,14 +1494,14 @@ input {
     position: relative;
     width: 0.75*40rpx;
     height: 0.75*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/audio/volume-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/audio/volume-ico.png') no-repeat;
     background-size: contain;
 }
 
 .audio .audio-handle.prev-ico, .audio .audio-play.prev-ico {
     width: 0.85*40rpx;
     height: 0.75*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/audio/prev-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/audio/prev-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -1538,7 +1511,7 @@ input {
     left: 2.7*40rpx;
     width: 0.75*40rpx;
     height: 0.75*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/audio/play-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/audio/play-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -1548,21 +1521,21 @@ input {
     left: 2.5*40rpx;
     width: 0.75*40rpx;
     height: 0.75*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/audio/pause-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/audio/pause-ico.png') no-repeat;
     background-size: contain;
 }
 
 .audio .audio-handle.next-ico, .audio .audio-play.next-ico {
     width: 0.85*40rpx;
     height: 0.75*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/audio/next-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/audio/next-ico.png') no-repeat;
     background-size: contain;
 }
 
 .audio .audio-handle.catalog-ico, .audio .audio-play.catalog-ico {
     width: 0.95*40rpx;
     height: 0.75*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/audio/catalog-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/audio/catalog-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -1695,7 +1668,7 @@ input {
     display: block;
     width: 0.95*40rpx;
     height: 0.775*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/listen-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/listen-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -1704,7 +1677,7 @@ input {
     display: block;
     width: 0.8*40rpx;
     height: 0.8*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/gift-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/gift-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -1731,7 +1704,7 @@ input {
     display: block;
     width: 0.85*40rpx;
     height: 0.85*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/reward-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/reward-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -1740,7 +1713,7 @@ input {
     display: block;
     width: 0.85*40rpx;
     height: 0.85*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/money-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/money-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -1749,7 +1722,7 @@ input {
     display: block;
     width: 0.85*40rpx;
     height: 0.85*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/collect-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/collect-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -1771,7 +1744,7 @@ input {
 .float-box .more-btn .haddle-btn.close-wrap .close-ico {
     width: 0.85*40rpx;
     height: 0.85*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/close-ico.png') no-repeat center;
+    background: url('@{domain}/wxstatic/template/images/close-ico.png') no-repeat center;
     background-size: contain;
 }
 
@@ -1783,7 +1756,7 @@ input {
 .Coupon .gift-color-ico {
     width: 0.9*40rpx;
     height: 0.9*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/gift-color-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/gift-color-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -1935,9 +1908,10 @@ input {
     color: #b2b2b2;
 }
 
-.Topic .weui-form-preview__value em {
+.Topic .weui-form-preview__value .em {
     color: #ff4900;
     font-style: normal;
+    display: inline-block;
 }
 
 .My .my-header {
@@ -2045,32 +2019,32 @@ input {
 }
 
 .My .my-list .recharge-ico {
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/my/money-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/my/money-ico.png') no-repeat;
     background-size: contain;
 }
 
 .My .my-list .history-ico {
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/my/history-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/my/history-ico.png') no-repeat;
     background-size: contain;
 }
 
 .My .my-list .coupon-ico {
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/my/coupon-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/my/coupon-ico.png') no-repeat;
     background-size: contain;
 }
 
 .My .my-list .topic-ico {
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/my/topic-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/my/topic-ico.png') no-repeat;
     background-size: contain;
 }
 
 .My .my-list .gift-ico {
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/my/gift-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/my/gift-ico.png') no-repeat;
     background-size: contain;
 }
 
 .My .my-list .collect-ico {
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/my/collect-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/my/collect-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -2125,7 +2099,7 @@ input {
     display: flex;
     width: 3.625*40rpx;
     height: 0.65*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/star-default-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/star-default-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -2135,7 +2109,7 @@ input {
     display: inline-block;
     width: 0.65*40rpx;
     height: 0.65*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/star-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/star-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -2165,7 +2139,7 @@ input {
     display: block;
     width: 0.55*40rpx;
     height: 0.525*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/close-small-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/close-small-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -2252,7 +2226,7 @@ input {
     display: block;
     width: 0.55*40rpx;
     height: 0.525*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/close-white-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/close-white-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -2280,7 +2254,7 @@ input {
     position: fixed;
     top: 10%;
     left: 0;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/choujiang-bg.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/choujiang-bg.png') no-repeat;
     background-size: contain;
     margin-left: 0;
 }
@@ -2292,7 +2266,7 @@ input {
     right: 1.5*40rpx;
     width: 1.125*40rpx;
     height: 1.125*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/close-circle-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/close-circle-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -2339,7 +2313,7 @@ input {
     width: 17.8*40rpx;
     height: 18.825*40rpx;
     margin: 0px auto;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/lottery/lottery-bg.png') no-repeat center;
+    background: url('@{domain}/wxstatic/template/images/lottery/lottery-bg.png') no-repeat center;
     background-size: contain;
     overflow: hidden;
     padding-left: 0.325*40rpx;
@@ -2395,7 +2369,7 @@ input {
     margin: 0.25*40rpx auto;
     width: 17.775*40rpx;
     height: 4.35*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/lottery/lottery-title.png') no-repeat center;
+    background: url('@{domain}/wxstatic/template/images/lottery/lottery-title.png') no-repeat center;
     background-size: contain;
 }
 
@@ -2432,7 +2406,7 @@ input {
     position: absolute;
     top: 0.625*40rpx;
     right: 0.625*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/lottery/close-ico.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/lottery/close-ico.png') no-repeat;
     background-size: contain;
 }
 
@@ -2457,7 +2431,7 @@ input {
     display: block;
     width: 2.1*40rpx;
     height: 1.75*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/lottery/glod-ioc.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/lottery/glod-ioc.png') no-repeat;
     background-size: contain;
 }
 
@@ -2468,7 +2442,7 @@ input {
     display: block;
     width: 2.1*40rpx;
     height: 1.75*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/lottery/packet.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/lottery/packet.png') no-repeat;
     background-size: contain;
 }
 
@@ -2520,7 +2494,7 @@ input {
     margin: 2.625*40rpx auto 1.25*40rpx;
     width: 8.35*40rpx;
     height: 2.125*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/lottery/lottery-way-1.png') no-repeat center;
+    background: url('@{domain}/wxstatic/template/images/lottery/lottery-way-1.png') no-repeat center;
     background-size: contain;
 }
 
@@ -2528,7 +2502,7 @@ input {
     margin: 2.625*40rpx auto 1.25*40rpx;
     width: 8.35*40rpx;
     height: 2.125*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/lottery/lottery-way-2.png') no-repeat center;
+    background: url('@{domain}/wxstatic/template/images/lottery/lottery-way-2.png') no-repeat center;
     background-size: contain;
 }
 
@@ -2589,7 +2563,7 @@ input {
     display: block;
     width: 3.025*40rpx;
     height: 1.325*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/lottery/succeed.png') no-repeat;
+    background: url('@{domain}/wxstatic/template/images/lottery/succeed.png') no-repeat;
     background-size: contain;
     margin-top: 0.45*40rpx;
 }
@@ -2636,7 +2610,7 @@ input {
     display: block;
     width: 1.15*40rpx;
     height: 1.15*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/tabnav/tab-library_ico.png') no-repeat center;
+    background: url('@{domain}/wxstatic/template/images/tabnav/tab-library_ico.png') no-repeat center;
     background-size: contain;
 }
 
@@ -2644,7 +2618,7 @@ input {
     display: block;
     width: 1.15*40rpx;
     height: 1.1*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/tabnav/tab-free_ico.png') no-repeat center;
+    background: url('@{domain}/wxstatic/template/images/tabnav/tab-free_ico.png') no-repeat center;
     background-size: contain;
 }
 
@@ -2652,7 +2626,7 @@ input {
     display: block;
     width: 1.125*40rpx;
     height: 1.15*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/tabnav/tab-found_ico.png') no-repeat center;
+    background: url('@{domain}/wxstatic/template/images/tabnav/tab-found_ico.png') no-repeat center;
     background-size: contain;
 }
 
@@ -2660,7 +2634,7 @@ input {
     display: block;
     width: 0.9*40rpx;
     height: 1.05*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/tabnav/tab-small-library_ico.png') no-repeat center;
+    background: url('@{domain}/wxstatic/template/images/tabnav/tab-small-library_ico.png') no-repeat center;
     background-size: contain;
 }
 
@@ -2668,32 +2642,32 @@ input {
     display: block;
     width: 0.95*40rpx;
     height: 1.15*40rpx;
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/tabnav/tab-my_ico.png') no-repeat center;
+    background: url('@{domain}/wxstatic/template/images/tabnav/tab-my_ico.png') no-repeat center;
     background-size: contain;
 }
 
 .nav-tabbar .weui-bar__item--on .nav-library-ico {
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/tabnav/tab-library_ico-h.png') no-repeat center;
+    background: url('@{domain}/wxstatic/template/images/tabnav/tab-library_ico-h.png') no-repeat center;
     background-size: contain;
 }
 
 .nav-tabbar .weui-bar__item--on .nav-free-ico {
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/tabnav/tab-free_ico-h.png') no-repeat center;
+    background: url('@{domain}/wxstatic/template/images/tabnav/tab-free_ico-h.png') no-repeat center;
     background-size: contain;
 }
 
 .nav-tabbar .weui-bar__item--on .nav-found_ico {
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/tabnav/tab-found_ico-h.png') no-repeat center;
+    background: url('@{domain}/wxstatic/template/images/tabnav/tab-found_ico-h.png') no-repeat center;
     background-size: contain;
 }
 
 .nav-tabbar .weui-bar__item--on .nav-small-library-ico {
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/tabnav/tab-small-library_ico-h.png') no-repeat center;
+    background: url('@{domain}/wxstatic/template/images/tabnav/tab-small-library_ico-h.png') no-repeat center;
     background-size: contain;
 }
 
 .nav-tabbar .weui-bar__item--on .nav-my_ico {
-    background: url('https://wxstatic.778mk.com/wxstatic/template/images/tabnav/tab-my_ico-h.png') no-repeat center;
+    background: url('@{domain}/wxstatic/template/images/tabnav/tab-my_ico-h.png') no-repeat center;
     background-size: contain;
 }
 
@@ -2853,4 +2827,15 @@ input {
     background-color: #ff4141;
     box-shadow: 0 0.075*40rpx 0.175*40rpx #390f71;
     bottom: 5.1*40rpx;
+}
+
+.swipe-item-wrapper {
+    margin-top: 0 !important;
+}
+
+.swipe-item-wrapper .swipe-content {
+    padding: 0 0rpx !important;
+    &:first-child {
+        // border-top: none
+    }
 }

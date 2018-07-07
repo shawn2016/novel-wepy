@@ -49,26 +49,26 @@
                                 <view class="slider">
                                     <view class="section section_gap">
                                         <view class="body-view">
-                                            <slider bindchange="slider3change" block-size="12" value="{{sumduration}}" activeColor="#333333" />
-                                            <text class="process-time">00:00</text>
-                                            <text class="totle-time">00:00</text>
+                                            <slider class="process-slider" bindchange="slider3change" block-size="12" value="{{sumduration}}" activeColor="#333333" />
+                                            <text class="process-time">{{currentTime}}</text>
+                                            <text class="totle-time">{{duration}}</text>
                                         </view>
                                     </view>
                                 </view>
                                 <view class="weui-flex handle">
                                     <view class="weui-flex__item flex">
-                                        <span @tap="prev" data-action='volume' class="audio-handle volume-voice-ico"></span>
+                                        <span class="audio-handle volume-voice-ico"></span>
                                     </view>
                                     <view class="weui-flex__item flex">
-                                        <span data-action='prev' class="audio-handle prev-ico"></span>
+                                        <span @tap="prev" class="audio-handle prev-ico"></span>
                                     </view>
                                     <view class="weui-flex__item flex">
-                                        <span class="audio-play switch-ico">
-                                            <span data-action='play' :class="play ? 'pause-ico' : 'play-ico' " class="audio-handle"></span>
+                                        <span hidden="{{isplaying}}" @tap="audioPause" class="audio-play switch-ico">
+                                            <span :class="{ 'audio-handle play-ico': !isplaying, 'audio-handle pause-ico': isplaying}"></span>
                                         </span>
                                     </view>
                                     <view class="weui-flex__item flex">
-                                        <span data-action='next' class="audio-handle next-ico"></span>
+                                        <span @tap="next" class="audio-handle next-ico"></span>
                                     </view>
                                     <view class="weui-flex__item flex">
                                         <span class="audio-handle catalog-ico"></span>
@@ -88,42 +88,104 @@
 
 <script>
 import wepy from 'wepy'
-import Common from 'utils/music'
-export default class XiaoshuoCover extends wepy.page {
+import Timer from 'utils/timer'
+import Music from 'utils/music'
+
+export default class listenDetail extends wepy.page {
   config = {
     navigationBarTitleText: '限免-书仙阁'
   }
   onReady(e) {
     this.audioCtx = wx.createAudioContext('myAudio')
   }
-  onLoad() {}
+  onLoad() {
+    console.log('正在播放 onLoad')
+  }
   data = {
     name: 'tets',
-    play: false,
+    isplaying: false,
+    currentTime: '00.00',
+    duration: '00.00',
+    sumduration: 0,
+    innerAudioContext: {},
     mp3Url:
-      'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46',
+      'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E061FF02C31F716658E5C81F5594D561F2E88B854E81CAAB7806D5E4F103E55D33C16F3FAC506D1AB172DE8600B37E43FAD&fromtag=46',
     picUrl:
       'http://p1.music.126.net/34YW1QtKxJ_3YnX9ZzKhzw==/2946691234868155.jpg',
     singer: 'zx'
   }
   slider3change(e) {
     sliderToseek(e, function(dataUrl, cal) {
-      console.log(dataUrl, cal)
-      wx.playBackgroundAudio({
-        dataUrl: dataUrl
-      })
       wx.seekBackgroundAudio({
         position: cal
       })
     })
   }
   onShow() {
-    Common.playMusic(this.mp3Url, this.name, this.picUrl)
+    musicPlay(this)
+  }
+  audioPause() {
+    if (this.isplaying) {
+      wx.pauseBackgroundAudio()
+      this.isplaying = false
+      this.$apply()
+    } else {
+      musicPlay(this)
+      this.isplaying = true
+      this.$apply()
+    }
   }
   prev() {
     console.log('上一首')
     prevSong(this)
   }
+  next() {
+    console.log('下一首')
+    prevSong(this)
+  }
+}
+function musicPlay(that) {
+  Music.playMusic(that.mp3Url, true)
+    .then(res => {
+      console.log(res)
+      if (res.status) {
+        that.isplaying = true
+        console.log(res.innerAudioContext)
+        // 背景音频播放进度更新事件
+        res.innerAudioContext.onTimeUpdate(() => {
+          that.currentTime = Timer.s_to_h(res.innerAudioContext.currentTime)
+          that.duration = Timer.s_to_h(res.innerAudioContext.duration)
+          that.sumduration =
+            res.innerAudioContext.currentTime *
+            100 /
+            res.innerAudioContext.duration
+          that.$apply()
+        })
+        // 背景音频自然播放结束事件
+        res.innerAudioContext.onEnded(() => {
+          that.isplaying = false
+          that.$apply()
+        })
+        // 背景音频播放错误事件
+        res.innerAudioContext.onError(() => {
+          that.isplaying = false
+          wx.showToast({
+            title: '播放错误',
+            icon: 'none'
+          })
+          that.$apply()
+        })
+      }
+    })
+    .catch(err => {
+      console.log(err)
+      that.isplaying = false
+      wx.showToast({
+        title: '播放错误',
+        icon: 'none'
+      })
+      that.$apply()
+    })
 }
 // 上一曲
 function prevSong(that) {

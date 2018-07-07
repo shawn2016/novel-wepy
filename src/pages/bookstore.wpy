@@ -461,7 +461,7 @@
                 </view>
             </view>
         </view>
-
+        <zan-toptips content="tip内容" duration="{{ duration }}" is-show="{{ $zanui.toptips.show }}" />
     </view>
 </template>
 
@@ -473,7 +473,15 @@ export default class Bookstore extends wepy.page {
   config = {
     navigationBarTitleText: '首页-书仙阁'
   }
+  components = {
+    'zan-toptips': 'path/to/zanui-weapp/dist/toptips/index'
+  }
   data = {
+    $zanui: {
+      toptips: {
+        show: false
+      }
+    },
     imgUrls: [
       'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
       'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
@@ -483,7 +491,7 @@ export default class Bookstore extends wepy.page {
     autoplay: true,
     interval: 5000,
     circular: true,
-    duration: 1000,
+    duration: 5000,
     readerData: [
       {
         imgUrl:
@@ -524,6 +532,7 @@ export default class Bookstore extends wepy.page {
   }
   onLoad() {
     this.getContacts()
+    // zanui.Toptips.showZanTopTips('只传文案展示')
   }
 
   getContacts() {

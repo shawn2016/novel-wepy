@@ -1,0 +1,112 @@
+<template>
+    <view class="container">
+        <view class="weui-tab Collect">
+            <view class="weui-tab__bd">
+                <view class="main">
+                    <view class="section-bd image-text smaller section-bd">
+                        <view class="bd-title">收藏</view>
+                        <view class="weui-panel__bd">
+                            <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                                <view class="weui-media-box__hd">
+                                    <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                    <span class="tag">
+                                        <i>限免</i>
+                                    </span>
+                                </view>
+                                <view class="weui-media-box__bd">
+                                    <view class="weui-media-box__title"> 标题一</view>
+                                    <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                                </view>
+                            </a>
+                        </view>
+                        <view class="weui-panel__bd">
+                            <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                                <view class="weui-media-box__hd">
+                                    <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                    <span class="tag">
+                                        <i>限免</i>
+                                    </span>
+                                </view>
+                                <view class="weui-media-box__bd">
+                                    <view class="weui-media-box__title"> 标题一</view>
+                                    <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                                </view>
+                            </a>
+                        </view>
+                        <view class="weui-panel__bd">
+                            <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                                <view class="weui-media-box__hd">
+                                    <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                    <span class="tag">
+                                        <i>限免</i>
+                                    </span>
+                                </view>
+                                <view class="weui-media-box__bd">
+                                    <view class="weui-media-box__title">标题一</view>
+                                    <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                                </view>
+                            </a>
+                        </view>
+                        <view class="weui-panel__bd">
+                            <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                                <view class="weui-media-box__hd">
+                                    <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                </view>
+                                <view class="weui-media-box__bd">
+                                    <view class="weui-media-box__title">标题一</view>
+                                    <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                                </view>
+                            </a>
+                        </view>
+                        <view class="weui-panel__bd">
+                            <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                                <view class="weui-media-box__hd">
+                                    <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                </view>
+                                <view class="weui-media-box__bd">
+                                    <view class="weui-media-box__title"> 标题一</view>
+                                    <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                                </view>
+                            </a>
+                        </view>
+                        <view class="weui-panel__bd">
+                            <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                                <view class="weui-media-box__hd">
+                                    <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                </view>
+                                <view class="weui-media-box__bd">
+                                    <view class="weui-media-box__title"> 标题一</view>
+                                    <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                                </view>
+                            </a>
+                        </view>
+                        <view class="weui-panel__bd">
+                            <a href="javascript:;" class="weui-media-box weui-media-box_appmsg">
+                                <view class="weui-media-box__hd">
+                                    <image class="weui-media-box__thumb" src="https://wxstatic.778mk.com/wxstatic/template/images/temp/read-history_img.jpg" alt="">
+                                </view>
+                                <view class="weui-media-box__bd">
+                                    <view class="weui-media-box__title">标题一</view>
+                                    <p class="weui-media-box__desc">五行山下，历经九世轮回的玄奘法师，冥冥中与因厌世隐匿山中的大猴子悟空再次相遇，法师聆听悟空讲述他历经九世追随师傅解救世人的故事。最终玄奘参破...</p>
+                                </view>
+                            </a>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </View>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class Collect extends wepy.page {
+  config = {
+    navigationBarTitleText: '收藏-书仙阁'
+  }
+}
+</script>
+
+<style>
+</style>

@@ -1,6 +1,5 @@
 <style lang="less">
 @import './zanui/index.wxss';
-@import 'assets/styles/weui.wxss';
 @import 'assets/styles/app.less';
 page {
   height: 100%;
@@ -26,14 +25,17 @@ setStore(store)
 export default class extends wepy.app {
   config = {
     pages: [
-      'pages/listen-detail',
-      'pages/listen-com',
       'pages/bookstore',
+      'pages/listen-catalog',
+      'pages/topic2',
+      'pages/read-history',
+      'pages/xiaoshuo-cover',
       'pages/free',
       'pages/recharge',
       'pages/books',
       'pages/mine',
-      'pages/xiaoshuo-cover',
+      'pages/listen-detail',
+      'pages/collect'
     ],
     window: {
       backgroundColor: '#fff',

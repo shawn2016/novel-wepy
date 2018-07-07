@@ -1,0 +1,49 @@
+<template>
+    <view class="container">
+        <view class="Read-history">
+            <repeat for="{{list}}" key="index" index="index" item="item">
+                <swipeDelete :swipeData="item" @delItem.user="handleDelItem">
+                    <view class="weui-cell weui-cell_swiped swipeout-touching">
+                        <view class="weui-cell__bd" style="transform: translate3d(0px, 0px, 0px);">
+                            <view class="weui-cell">
+                                <view class="weui-cell__bd">
+                                    <a class="read-list" href="javascript:;">{{item.title}}
+                                        <span>第一章</span>
+                                    </a>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="weui-cell__ft">
+                            <a class="weui-swiped-btn weui-swiped-btn_warn delete-swipeout" href="javascript:">删除</a>
+                        </view>
+                    </view>
+                </swipeDelete>
+            </repeat>
+        </view>
+    </View>
+</template>
+
+<script>
+import wepy from 'wepy'
+import swipeDelete from 'wepy-swipe-delete'
+export default class ReadHistory extends wepy.page {
+  components = {
+    swipeDelete
+  }
+  config = {
+    navigationBarTitleText: '阅读历史-书仙阁'
+  }
+  data = {
+    list: [{ id: 1, title: '标题1' }, { id: 2, title: '标题2' }]
+  }
+
+  methods = {
+    handleDelItem(itemData) {
+      console.log(itemData)
+    }
+  }
+}
+</script>
+
+<style>
+</style>

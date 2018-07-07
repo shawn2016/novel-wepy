@@ -1,0 +1,45 @@
+<template>
+    <view class="container">
+        <view class="Topic">
+            <view class="main">
+                <view class="topic-bd">
+                    <view class="topic-banner">
+                        <image src="https://wxstatic.778mk.com/wxstatic/template/images/topic/img_1.jpg" alt="">
+                    </view>
+                    <view class="weui-form-preview__bd">
+                        <view class="weui-form-preview__item">
+                            <label class="weui-form-preview__label">商品</label>
+                            <span class="weui-form-preview__value">
+                                <view class="em">321123</view>人参与</span>
+                        </view>
+                    </view>
+                </view>
+                <view class="topic-bd">
+                    <view class="topic-banner">
+                        <image src="https://wxstatic.778mk.com/wxstatic/template/images/topic/img_1.jpg" alt="">
+                    </view>
+                    <view class="weui-form-preview__bd">
+                        <view class="weui-form-preview__item">
+                            <label class="weui-form-preview__label">商品</label>
+                            <span class="weui-form-preview__value">
+                                <view class="em">321123</view>人参与</span>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </View>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class Topic2 extends wepy.page {
+  config = {
+    navigationBarTitleText: '活动-书仙阁'
+  }
+}
+</script>
+
+<style>
+</style>

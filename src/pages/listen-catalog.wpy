@@ -1,0 +1,209 @@
+<template>
+    <view class="container">
+        <view class="weui-tab Listen">
+            <view class="weui-tab__bd">
+                <view class="weui-tab__bd-item weui-tab__bd-item--active">
+                    <view class="main">
+                        <view class="ad-wrap">
+                            <image src="https://wxstatic.778mk.com/wxstatic/template/images/temp/ad/ad_04.jpg" alt="">
+                        </view>
+                        <view class="section-bd image-text list-content">
+                            <view class="sub-list-catalog">
+                                <view class="sub-catalog-wrap">
+                                    <view class="weui-flex sub-wrap">
+                                        <view class="weui-flex__item">
+                                            <span>共111章</span>
+                                        </view>
+                                        <view class="weui-flex__item select-catalog-wrap">
+                                            <input type="text" placeholder="选择章节" id="selectCatalog" class="select-catalog" readonly>
+                                            <span class="pull-ico"></span>
+                                        </view>
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="weui-cells content-list">
+                                <a class="weui-cell weui-cell_access" href="javascript:;">
+                                    <view class="weui-cell__bd">
+                                        <p>第一章 卸甲归田</p>
+                                    </view>
+                                    <view class="weui-cell__ft">
+                                    </view>
+                                </a>
+                                <a class="weui-cell weui-cell_access" href="javascript:;">
+                                    <view class="weui-cell__bd">
+                                        <p>第二章 卸甲归田</p>
+                                    </view>
+                                    <view class="weui-cell__ft">
+                                    </view>
+                                </a>
+                                <a class="weui-cell weui-cell_access" href="javascript:;">
+                                    <view class="weui-cell__bd">
+                                        <p>第三章 卸甲归田</p>
+                                    </view>
+                                    <view class="weui-cell__ft">
+                                    </view>
+                                </a>
+                                <a class="weui-cell weui-cell_access" href="javascript:;">
+                                    <view class="weui-cell__bd">
+                                        <p>第三章 卸甲归田</p>
+                                    </view>
+                                    <view class="weui-cell__ft">
+                                    </view>
+                                </a>
+                                <a class="weui-cell weui-cell_access" href="javascript:;">
+                                    <view class="weui-cell__bd">
+                                        <p>第三章 卸甲归田</p>
+                                    </view>
+                                    <view class="weui-cell__ft">
+                                    </view>
+                                </a>
+                                <a class="weui-cell weui-cell_access" href="javascript:;">
+                                    <view class="weui-cell__bd">
+                                        <p>第三章 卸甲归田</p>
+                                    </view>
+                                    <view class="weui-cell__ft">
+                                    </view>
+                                </a>
+                                <a class="weui-cell weui-cell_access" href="javascript:;">
+                                    <view class="weui-cell__bd">
+                                        <p>第三章 卸甲归田</p>
+                                    </view>
+                                    <view class="weui-cell__ft">
+                                    </view>
+                                </a>
+                                <a class="weui-cell weui-cell_access" href="javascript:;">
+                                    <view class="weui-cell__bd">
+                                        <p>第三章 卸甲归田</p>
+                                    </view>
+                                    <view class="weui-cell__ft">
+                                    </view>
+                                </a>
+                                <a class="weui-cell weui-cell_access" href="javascript:;">
+                                    <view class="weui-cell__bd">
+                                        <p>第三章 卸甲归田</p>
+                                    </view>
+                                    <view class="weui-cell__ft">
+                                    </view>
+                                </a>
+                                <a class="weui-cell weui-cell_access" href="javascript:;">
+                                    <view class="weui-cell__bd">
+                                        <p>第三章 卸甲归田</p>
+                                    </view>
+                                    <view class="weui-cell__ft">
+                                    </view>
+                                </a>
+                                <a class="weui-cell weui-cell_access" href="javascript:;">
+                                    <view class="weui-cell__bd">
+                                        <p>第三章 卸甲归田</p>
+                                    </view>
+                                    <view class="weui-cell__ft">
+                                    </view>
+                                </a>
+                                <a class="weui-cell weui-cell_access" href="javascript:;">
+                                    <view class="weui-cell__bd">
+                                        <p>第三章 卸甲归田</p>
+                                    </view>
+                                    <view class="weui-cell__ft">
+                                    </view>
+                                </a>
+                                <a class="weui-cell weui-cell_access" href="javascript:;">
+                                    <view class="weui-cell__bd">
+                                        <p>第三章 卸甲归田</p>
+                                    </view>
+                                    <view class="weui-cell__ft">
+                                    </view>
+                                </a>
+                                <a class="weui-cell weui-cell_access" href="javascript:;">
+                                    <view class="weui-cell__bd">
+                                        <p>第三章 卸甲归田</p>
+                                    </view>
+                                    <view class="weui-cell__ft">
+                                    </view>
+                                </a>
+                                <a class="weui-cell weui-cell_access" href="javascript:;">
+                                    <view class="weui-cell__bd">
+                                        <p>第三章 卸甲归田</p>
+                                    </view>
+                                    <view class="weui-cell__ft">
+                                    </view>
+                                </a>
+                                <a class="weui-cell weui-cell_access" href="javascript:;">
+                                    <view class="weui-cell__bd">
+                                        <p>第三章 卸甲归田</p>
+                                    </view>
+                                    <view class="weui-cell__ft">
+                                    </view>
+                                </a>
+                                <a class="weui-cell weui-cell_access" href="javascript:;">
+                                    <view class="weui-cell__bd">
+                                        <p>第三章 卸甲归田</p>
+                                    </view>
+                                    <view class="weui-cell__ft">
+                                    </view>
+                                </a>
+                                <a class="weui-cell weui-cell_access" href="javascript:;">
+                                    <view class="weui-cell__bd">
+                                        <p>第三章 卸甲归田</p>
+                                    </view>
+                                    <view class="weui-cell__ft">
+                                    </view>
+                                </a>
+                            </view>
+                        </view>
+                        <view class="weui-loadmore">
+                            <i class="weui-loading"></i>
+                            <span class="weui-loadmore__tips">正在加载</span>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </View>
+</template>
+
+<script>
+import wepy from 'wepy'
+export default class ListenCatalog extends wepy.page {
+  config = {
+    navigationBarTitleText: '书名-书仙阁'
+  }
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom() {
+    // var that = this
+    // 显示加载图标
+    // wx.showLoading({
+    //   title: '玩命加载中'
+    // })
+    console.log('222')
+    // 页数+1
+    // page = page + 1
+    // wx.request({
+    //   url: 'https://xxx/?page=' + page,
+    //   method: "GET",
+    //   // 请求头部
+    //   header: {
+    //     'content-type': 'application/text'
+    //   },
+    //   success: function (res) {
+    //     // 回调函数
+    //     var moment_list = that.data.moment;
+
+    //     for (var i = 0; i < res.data.data.length; i++) {
+    //       moment_list.push(res.data.data[i]);
+    //     }
+    //     // 设置数据
+    //     that.setData({
+    //       moment: that.data.moment
+    //     })
+    //     // 隐藏加载框
+    //     wx.hideLoading();
+    //   }
+    // })
+  }
+}
+</script>
+
+<style>
+</style>

@@ -65,15 +65,6 @@
                                             充值送大礼
                                         </span>
                                     </navigator>
-                                    <navigator url="./listen-com" open-type="navigate" class="weui-cell weui-cell_access">
-                                        <view class="weui-cell__hd list recharge-ico"></view>
-                                        <view class="weui-cell__bd weui-cell_primary">
-                                            <p>播放器</p>
-                                        </view>
-                                        <span class="weui-cell__ft">
-                                            充值送大礼
-                                        </span>
-                                    </navigator>
                                     <a class="weui-cell weui-cell_access" href="javascript:;">
                                         <view class="weui-cell__hd list history-ico"></view>
                                         <view class="weui-cell__bd weui-cell_primary">
@@ -109,14 +100,14 @@
                                             送书币
                                         </span>
                                     </a>
-                                    <a class="weui-cell weui-cell_access" href="javascript:;">
+                                    <navigator url="./collect" open-type="navigate" class="weui-cell weui-cell_access">
                                         <view class="weui-cell__hd list collect-ico"></view>
                                         <view class="weui-cell__bd weui-cell_primary">
                                             <p>收藏</p>
                                         </view>
                                         <span class="weui-cell__ft">
                                         </span>
-                                    </a>
+                                    </navigator>
                                 </view>
                             </view>
                         </view>
